@@ -7,7 +7,7 @@
 ## 1. OBJETIVO ACTUAL
 
 Conseguir continuidad de contexto entre distintas IAs
-mediante una memoria temporal externa a cualquier IA.
+mediante una memory temporal externa a cualquier IA.
 
 ## 2. CONTEXTO
 
