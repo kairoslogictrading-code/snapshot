@@ -1,0 +1,21 @@
+KAIROSLOGIC SNAPSHOT
+2026-08-14
+
+TEMA
+Memoria temporal multi-IA.
+
+CONCLUSIONES
+- El objetivo es disponer de un estado compartido entre diferentes IAs.
+- No se desea inicialmente una base de datos ni infraestructura compleja.
+- Google Drive es el almacenamiento común disponible.
+- snapshot.txt será el candidato inicial.
+
+DECISIONES
+- Mantener memoria temporal separada del SSOT institucional.
+
+PENDIENTE
+- Resolver acceso multi-IA.
+- Definir formato definitivo.
+
+SIGUIENTE ACCIÓN
+Probar mecanismo de actualización del snapshot.
