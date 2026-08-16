@@ -70,6 +70,11 @@ Mantener la continuidad del proyecto y evitar que el desarrollo de un subproyect
 
 Analizar la evidencia histórica real de los Expert Advisors de KairosLogic y preparar progresivamente la migración desde los tres terminales MT5 actuales hacia un único terminal de laboratorio.
 
+### Chats IA
+ChatGPT: Flota de EAs y laboratorio MT5
+Gemini NoteBook: MQL5 Debug
+Gemini NoteBook: Balance 5 EA
+
 ### Estado actual
 
 Investigación activa.
@@ -266,6 +271,10 @@ Verificar físicamente el estado actual de KairosBuilder y del Knowledge Compile
 
 Sanear el corpus institucional de ADRs para eliminar contradicciones, duplicidades, decisiones obsoletas y pérdida de rumbo documental.
 
+### Chats IA
+ChatGPT: KairosLogic ADR Saneamiento
+Gemini Notebook: KairosADR
+
 ### Estado actual
 
 Trabajo activo.
@@ -411,6 +420,9 @@ Continuar el saneamiento institucional antes de realizar nuevas consolidaciones 
 ### Misión
 
 Crear una memoria temporal externa a cualquier IA que permita que ChatGPT, Gemini, Claude, DeepSeek y las IAs locales puedan continuar el trabajo desde el estado dejado por otra conversación.
+
+### Chats IA
+ChatGPT: Diseño Memoria Temporal KairosLogic
 
 ### Estado actual
 
