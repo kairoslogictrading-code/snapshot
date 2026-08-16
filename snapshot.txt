@@ -1,21 +1,71 @@
-KAIROSLOGIC SNAPSHOT
-2026-08-14
+# KAIROSLOGIC SNAPSHOT
 
-TEMA
-Memoria temporal multi-IA.
+> Última actualización: 2026-08-16
+> Estado: Investigación activa
+> Área: Memoria Temporal Multi-IA
 
-CONCLUSIONES
-- El objetivo es disponer de un estado compartido entre diferentes IAs.
-- No se desea inicialmente una base de datos ni infraestructura compleja.
-- Google Drive es el almacenamiento común disponible.
-- snapshot.txt será el candidato inicial.
+## 1. OBJETIVO ACTUAL
 
-DECISIONES
-- Mantener memoria temporal separada del SSOT institucional.
+Conseguir continuidad de contexto entre distintas IAs
+mediante una memoria temporal externa a cualquier IA.
 
-PENDIENTE
-- Resolver acceso multi-IA.
-- Definir formato definitivo.
+## 2. CONTEXTO
 
-SIGUIENTE ACCIÓN
-Probar mecanismo de actualización del snapshot.
+KairosLogic dispone de SSOT principal, SSOT temáticos,
+Knowledge Compiler, C:\SSOT sincronizado con Google Drive,
+VPS 24/7 y Power-Laboratory.
+
+La memoria temporal debe complementar estas piezas,
+no sustituirlas.
+
+## 3. CONCLUSIONES
+
+- La memoria institucional ya existe en el SSOT.
+- Falta conservar el contexto temporal de trabajo.
+- La memoria debe ser independiente de cualquier IA.
+- GitHub ha demostrado ser accesible desde ChatGPT y DeepSeek.
+- El snapshot público puede ser leído externamente.
+- La actualización puede realizarla Manuel desde móvil.
+
+## 4. DECISIONES
+
+### D-001
+Mantener la memoria temporal separada del SSOT.
+
+### D-002
+Utilizar inicialmente un único snapshot como
+punto de continuidad.
+
+### D-003
+No introducir todavía Mem0, embeddings, vector DB,
+grafos ni infraestructura adicional.
+
+## 5. HIPÓTESIS ABIERTAS
+
+- GitHub podría ser suficiente como almacenamiento
+  remoto inicial.
+- El VPS podría convertirse posteriormente en
+  punto de acceso permanente.
+- Un único snapshot podría ser suficiente para
+  la continuidad cotidiana.
+
+## 6. PENDIENTES
+
+- Definir estructura definitiva del snapshot.
+- Definir metodología de actualización.
+- Determinar si necesitamos acceso automático.
+- Investigar MCP/API solamente si aparece una necesidad real.
+
+## 7. SIGUIENTE ACCIÓN
+
+Diseñar una metodología extremadamente sencilla
+para mantener este snapshot actualizado durante
+el trabajo cotidiano con distintas IAs.
+
+## 8. ÚLTIMOS CAMBIOS
+
+2026-08-16
+- GitHub probado con éxito.
+- DeepSeek ha podido leer el snapshot.
+- ChatGPT ha podido leer el snapshot.
+- Actualización desde móvil comprobada.
