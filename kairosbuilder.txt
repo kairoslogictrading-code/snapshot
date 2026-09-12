@@ -1,0 +1,122 @@
+# KAIROSLOGIC - KAIROSBUILDER
+
+Última actualización: 2026-09-12
+Estado: Evolución activa
+
+---
+
+# MISIÓN
+
+Transformar conocimiento institucional en artefactos reproducibles.
+
+---
+
+# PRINCIPIO
+
+KnowledgeModel
+↓
+Compilación
+↓
+Artefactos
+
+No generar documentos directamente desde archivos dispersos.
+
+---
+
+# ARQUITECTURA ACTUAL
+
+Discovery
+↓
+KnowledgeModel
+↓
+Knowledge Analyzer
+↓
+Artifact Builders
+↓
+Artifacts
+
+---
+
+# ESTADO CONOCIDO
+
+RC1 a RC5 completados según documentación disponible.
+
+Existe incertidumbre sobre:
+
+- qué está implementado realmente;
+- qué permanece únicamente documentado.
+
+Debe verificarse físicamente.
+
+---
+
+# LÍNEAS ABIERTAS
+
+## Normalización ADR
+
+Estado:
+Realizada parcialmente.
+
+Pendiente:
+
+- verificar consumidores reales;
+- verificar integración efectiva.
+
+---
+
+## RC4.3
+
+Objetivo:
+
+Consumir ADR normalizados como fuente principal.
+
+---
+
+## Artifact Builders
+
+Propuesta abierta:
+
+Sustituir Strategy por Artifact Builder.
+
+Estado:
+
+Conceptualmente aprobado para estudio.
+No institucionalizado.
+
+---
+
+## CLI
+
+Diseñada.
+Pendiente de implementación.
+
+---
+
+## Workbench
+
+Diseñado.
+Pendiente de implementación.
+
+---
+
+# PRINCIPIO ACTUAL
+
+No asumir que algo existe porque aparezca en un ADR.
+
+Verificar físicamente.
+
+---
+
+# PENDIENTES
+
+- Auditoría física del estado actual.
+- Verificación de RCs.
+- Verificación de módulos reales.
+- Revisar consumo de ADR normalizados.
+- Decidir evolución futura.
+
+---
+
+# ESTADO
+
+Prioridad media-alta.
