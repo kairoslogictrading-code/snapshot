@@ -1,0 +1,113 @@
+# RISK MANAGEMENT
+
+Última actualización: 2026-09-12
+
+Estado: EN DESARROLLO
+
+Propósito:
+Definir los principios de gestión de riesgo aplicables a todos los sistemas KairosLogic.
+
+---
+
+# PRINCIPIO GENERAL
+
+La preservación del capital tiene prioridad sobre la maximización del beneficio.
+
+---
+
+# PRINCIPIOS
+
+## R-001
+
+Toda posición debe tener una salida definida.
+
+## R-002
+
+El riesgo debe estar limitado antes de abrir la operación.
+
+## R-003
+
+La robustez prevalece sobre la optimización.
+
+## R-004
+
+La evidencia prevalece sobre la intuición.
+
+---
+
+# STOP LOSS
+
+La arquitectura actual utiliza:
+
+* Stop Loss físico en broker.
+* Actualización dinámica mediante ATR.
+
+---
+
+# ADVERTENCIA
+
+Un Stop Loss físico NO garantiza una pérdida máxima exacta.
+
+Persisten riesgos de:
+
+* Gap
+* Slippage
+* Suspensión
+* Falta de liquidez
+* Dislocaciones de mercado
+
+---
+
+# PRINCIPIOS DE VALIDACIÓN
+
+Antes de producción:
+
+* Backtest
+* Evidencia histórica
+* Demo
+* Observación
+* Revisión
+
+---
+
+# RIESGO OPERATIVO
+
+Debe evaluarse:
+
+* Broker
+* Infraestructura
+* Datos
+* Ejecución
+* Disponibilidad
+
+---
+
+# RELACIÓN CON BROKERS
+
+La selección de broker forma parte del control de riesgo institucional.
+
+No debe evaluarse únicamente por coste.
+
+También deben considerarse:
+
+* estabilidad;
+* ejecución;
+* regulación;
+* disponibilidad;
+* compatibilidad MT5;
+* continuidad operativa.
+
+---
+
+# PENDIENTES
+
+* Formalizar marco completo de riesgo.
+* Integrar criterios de broker.
+* Integrar telemetría.
+* Definir métricas oficiales.
+
+---
+
+# SIGUIENTE ACCIÓN
+
+Documentar de forma institucional las limitaciones reales del Stop Loss físico y los criterios de selección de broker.
