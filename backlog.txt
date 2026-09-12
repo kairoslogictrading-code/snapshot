@@ -1,69 +1,179 @@
 # KAIROSLOGIC BACKLOG
 
-Última actualización: YYYY-MM-DD
+Última actualización: 2026-09-13
 
 ---
 
-## B-001
-TÍTULO:
-SnapshotBuilder para KairosBuilder
+=== BACKLOG ===
+Repositorio: snapshot
+Fuente: DeepSeek (Arquitecto Principal / Implementador de KairosBuilder)
+Ámbito: esta conversación concreta (últimas 8 horas verificadas)
+Estado: PROPUESTA — pendiente de validación humana antes de publicar
 
-ORIGEN:
-DeepSeek KairosBuilder
+================================================================================
+=== B-001 — Estado del Compilador KairosBuilder ===
+================================================================================
+Estado: CERRADO (informativo)
+Responsable: DeepSeek
 
-DESCRIPCIÓN:
-Crear un ArtifactBuilder específico capaz de consumir
-el repositorio snapshot y generar artefactos de contexto
-para IAs.
+Hecho verificado:
+- KairosBuilder funciona como compilador institucional.
+- Pipeline operativo: Bootstrap → Validate → Discovery → GenerateSSOT.
+- Genera en Output/: ssot.md, ssot.txt, ssot_master.md, ssot_master.txt.
+- RCs completadas y congeladas: RC1, RC2, RC3, RC3.5, RC3.6, RC4, RC4.1.
+- Snapshot de seguridad creado: RC4_before_normalization.
 
-ESTADO:
-Idea
+Arquitectura actual (knowledge/):
+- models.py         KnowledgeModel, DocumentModel, Section, Block, AdrDocument
+- analyzer.py       KnowledgeAnalyzer (mínimo)
+- composer.py       DocumentComposer + DocumentStrategy
+- strategies.py     OperationalSSOTStrategy, InstitutionalMasterStrategy
+- renderers.py      MarkdownRenderer, PlainTextRenderer
+- parsers.py        ADRParser (frontmatter YAML de ADR normalizados)
 
-PRIORIDAD:
-Media
+================================================================================
+=== B-002 — Normalización de ADR (RC4.1) ===
+================================================================================
+Estado: CERRADO con deuda técnica pendiente
+Responsable: DeepSeek
 
-DEPENDENCIAS:
-Maduración de KairosBuilder
+Hecho verificado:
+- 86 ADR normalizados a formato canónico con frontmatter YAML (ADR-088).
+- Campos: id, title, status, created, updated, legacy,
+          architectural_level, summary, keywords, related.
+- Secciones: Status, Context, Decision, Consequences.
+- Script ejecutado: Scripts/SSOTBuilder/normalize_adrs.py.
+- Snapshot de seguridad: RC4_before_normalization.
 
----
+Deuda técnica detectada:
+- strategies.py y generate_ssot_phase.py siguen consumiendo adr_docs
+  (metadatos antiguos) en lugar de adr_parsed (frontmatter normalizado).
+- Consecuencia: el SSOT generado NO refleja la normalización todavía.
+  Títulos duplicados, clasificación temática antigua, orden no coherente.
 
-## B-002
-TÍTULO:
-Migración Strategy → Artifact Builder
+================================================================================
+=== B-003 — Experimento RC4.2 (Gemini Normalizer) ===
+================================================================================
+Estado: DISEÑADO, NO EJECUTADO
+Responsable: DeepSeek / Gemini
 
-ORIGEN:
-DeepSeek KairosBuilder
+Hecho verificado:
+- Script diseñado: Scripts/normalize_adrs_gemini.py.
+- Prompt fijo: Scripts/Prompts/adr_normalization.md.
+- Validación estricta del formato ADR-088 integrada.
+- NO se ha ejecutado todavía.
 
-DESCRIPCIÓN:
-Evaluar la sustitución del patrón Strategy actual por
-Artifact Builders especializados.
+Hipótesis pendiente de comprobar:
+- Gemini Pro podría normalizar ADR con calidad suficiente.
+- El experimento sirve como banco de pruebas antes de integrar
+  un comando institucional (python build.py normalize-adrs).
 
-ESTADO:
-Pendiente de evaluación
+================================================================================
+=== B-004 — Ajustes Conceptuales Aprobados y Pendientes ===
+================================================================================
+Estado: ABIERTO
+Responsable: DeepSeek / Nuevo Director ChatGPT
 
-PRIORIDAD:
-Alta
+Aprobados por el Director Humano (no implementados):
+1. Discovery no debe imponer orden institucional.
+   Discovery descubre. La política de compilación pertenece al artefacto.
+2. Evitar bloques literales masivos en el DocumentModel.
+   Los Renderers deben permanecer limpios: reciben bloques normales,
+   no un bloque de 5000 líneas.
 
-DEPENDENCIAS:
-Auditoría de RC4.x
+Pendientes de aprobación explícita del nuevo Director:
+3. Migración conceptual de Strategy a Artifact Builder.
+   Sustituir OperationalSSOTStrategy / InstitutionalMasterStrategy por:
+   Artifacts/
+     ├── SSOTBuilder
+     ├── GlobalBuilder
+     ├── CodeIndexBuilder
+     └── MetricsBuilder
+   Todos consumen KnowledgeModel y producen Artifact.
 
----
+================================================================================
+=== B-005 — Nueva Línea: Repositorio Snapshot ===
+================================================================================
+Estado: ABIERTO
+Responsable: Director Humano / Multi-IA
 
-## B-003
-TÍTULO:
-Broker Adapter Layer
+Hecho verificado:
+- Repositorio GitHub público denominado "snapshot".
+- Objetivo: memoria temporal multi-IA para continuidad entre conversaciones.
+- Flujo conceptual:
+      SSOT → Snapshot Repository → ChatGPT / Gemini / Claude / DeepSeek / IA Local
+- El snapshot NO sustituye al SSOT ni a los ADR.
 
-ORIGEN:
-ChatGPT
+Ficheros creados:
+- snapshot.txt
+- projects.txt
+- roadmap.txt
+- decisions.txt
+- architecture.txt
+- brokers.txt
+- mt5_lab.txt
+- bunker.txt
+- kairosbuilder.txt
+- adr_cleanup.txt
+- knowledge.txt
+- ai_lab.txt
+- risk.txt
 
-DESCRIPCIÓN:
-Introducir capa de abstracción entre estrategia y broker.
+Limitación conocida:
+- DeepSeek no puede leer GitHub directamente en esta línea.
+- El contenido debe llegar por vía textual a la conversación.
 
-ESTADO:
-Conceptual
+Recomendación:
+- Corto plazo: pegado directo o bundle agregado.
+- Medio plazo: SnapshotBuilder como ArtifactBuilder dentro del compilador.
 
-PRIORIDAD:
-Baja
+================================================================================
+=== B-006 — Principios de Trabajo Firmados en esta Línea ===
+================================================================================
+Estado: CERRADO (informativo)
+Responsable: Director Humano
 
-DEPENDENCIAS:
-Selección broker producción
+Hecho verificado:
+- Método incremental RC a RC, congelando cada versión.
+- Roles:
+    ChatGPT         Arquitecto / Redactor ADR
+    DeepSeek        Implementador / Arquitecto Principal
+    Claude          Auditor independiente
+    Gemini          Candidato a normalizador
+    Director Humano Autoridad final
+- Gobernanza activa: ADR-002, ADR-004, ADR-006, ADR-039, ADR-043, ADR-088.
+
+================================================================================
+=== B-007 — Preguntas Abiertas al Nuevo Director ===
+================================================================================
+Estado: ABIERTO
+Responsable: Nuevo Director ChatGPT
+
+Solicitud:
+1. ¿Se aprueba actualizar strategies.py y generate_ssot_phase.py
+   para consumir adr_parsed?
+2. ¿Dónde vive el orden institucional?
+   (¿GenerateSSOT, ArtifactBuilder, CompilationPolicy?)
+3. ¿Se aprueba la migración conceptual de Strategy a Artifact Builder?
+4. ¿Requiere ADR nuevo (posible ADR-089) o se modifica alguno existente?
+
+================================================================================
+=== RECOMENDACIÓN DE FORMATO ===
+================================================================================
+- Mantener backlog.txt como lista viva de tareas pendientes.
+- Cada entrada con: identificador (B-XXX), estado
+  (abierto / en curso / bloqueado / cerrado), IA responsable, fecha,
+  y enlace cruzado con ADR.
+- Al cerrar una tarea, mover el resumen a decisions.txt o al ADR correspondiente.
+
+================================================================================
+=== ADVERTENCIA FINAL ===
+================================================================================
+Esta entrada cubre exclusivamente las últimas 8 horas de esta conversación
+concreta con DeepSeek. Cualquier material generado en otras sesiones o con
+otras IAs no está en el contexto de DeepSeek y debe ser aportado
+explicitamente por el Director Humano.
+
+================================================================================
+FIN DEL BACKLOG
+================================================================================
