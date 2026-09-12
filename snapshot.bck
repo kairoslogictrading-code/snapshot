@@ -1,0 +1,785 @@
+# KAIROSLOGIC SNAPSHOT
+
+> Última actualización: 2026-08-16
+> Estado global: Investigación y desarrollo activo
+> Propósito: Estado operativo actual de KairosLogic para continuidad entre IAs
+
+---
+
+# 0. FUNCIÓN DEL SNAPSHOT
+
+Este fichero representa el **estado operativo temporal actual de KairosLogic**.
+
+Su función es permitir que una nueva IA pueda comprender rápidamente:
+
+* qué está ocurriendo actualmente;
+* qué subproyectos están activos;
+* qué se ha completado;
+* qué está en curso;
+* qué queda pendiente;
+* qué decisiones están tomadas;
+* qué decisiones siguen abiertas;
+* y qué SSOT debe consultar para profundizar.
+
+El snapshot **no sustituye al SSOT**.
+
+El snapshot **no sustituye a los ADR**.
+
+El snapshot **no contiene el conocimiento institucional completo**.
+
+El snapshot **no contiene el código fuente de los EAs**.
+
+El snapshot debe mantenerse deliberadamente pequeño para minimizar el consumo de tokens y facilitar su lectura desde dispositivos móviles.
+
+---
+
+# 1. ESTADO GLOBAL
+
+## Objetivo global
+
+Desarrollar KairosLogic como un sistema institucional de conocimiento, investigación, arquitectura y ejecución, manteniendo la independencia respecto de cualquier IA concreta.
+
+## Estado actual
+
+KairosLogic se encuentra simultáneamente en varias líneas de trabajo:
+
+* saneamiento y consolidación del conocimiento institucional;
+* análisis de la flota de EAs;
+* consolidación del laboratorio MT5;
+* evolución de KairosBuilder y del Knowledge Compiler;
+* diseño de una memoria temporal común para múltiples IAs;
+* evolución de la infraestructura de IA.
+
+Estos subproyectos deben avanzar de forma paralela sin perder la separación entre:
+
+**Institución → Laboratorio → Evidencia → Memoria temporal.**
+
+## Prioridad global actual
+
+Mantener la continuidad del proyecto y evitar que el desarrollo de un subproyecto genere decisiones no verificadas o contradicciones con el conocimiento institucional.
+
+---
+
+# 2. SUBPROYECTOS
+
+---
+
+## 2.1 FLOTA DE EAs Y LABORATORIO MT5
+
+### Misión
+
+Analizar la evidencia histórica real de los Expert Advisors de KairosLogic y preparar progresivamente la migración desde los tres terminales MT5 actuales hacia un único terminal de laboratorio.
+
+### Chats IA
+ChatGPT: Flota de EAs y laboratorio MT5
+Gemini NoteBook: MQL5 Debug
+Gemini NoteBook: Balance 5 EA
+
+### Estado actual
+
+Investigación activa.
+
+Existen tres terminales portables MetaTrader 5 en:
+
+`C:\KairosLab\`
+
+La flota actual está formada por cinco EAs:
+
+* `KLT_TN`
+* `KLT_TB`
+* `KLT_TG`
+* `KLEA_EN`
+* `KLEA_EB`
+
+Cada EA dispone de su propio Magic Number.
+
+### Magic Numbers oficiales
+
+#### Familia KLT — Tecnológicas Nasdaq
+
+* `KLT_TN` → `303030`
+* `KLT_TB` → `303031`
+* `KLT_TG` → `303032`
+
+#### Familia KLEA — Energéticas Australianas
+
+* `KLEA_EB` → `303040`
+* `KLEA_EN` → `303041`
+
+### Infraestructura actual
+
+Los KLT operan actualmente sobre cuentas MetaQuotes Demo **Netting**.
+
+Los KLEA operan sobre una cuenta **Pepperstone Demo Hedging**.
+
+La cuenta Pepperstone comenzó con 50.000 USD y posteriormente fue ampliada a 100.000 USD.
+
+El saldo observado en la telemetría del 13/08/2026 era:
+
+`97.652,11 USD`
+
+### Objetivo inmediato
+
+Extraer el histórico real directamente desde cada uno de los tres terminales MT5.
+
+La telemetría de Telegram sirve como observación operativa, pero **no constituye la fuente primaria del histórico de operaciones**.
+
+### Datos que se deben obtener
+
+Para cada EA:
+
+* operaciones;
+* entradas;
+* salidas;
+* símbolos;
+* volumen;
+* precios;
+* beneficio;
+* costes;
+* duración;
+* drawdown;
+* exposición;
+* comportamiento temporal;
+* comportamiento por símbolo;
+* distribución de ganancias y pérdidas;
+* métricas de estabilidad y consistencia.
+
+### Evaluación
+
+No se debe determinar el mejor EA únicamente por beneficio absoluto.
+
+La evaluación debe considerar conjuntamente:
+
+* rentabilidad;
+* seguridad;
+* drawdown;
+* profit factor;
+* expectancy;
+* Sharpe cuando la muestra sea suficiente;
+* win rate;
+* número de operaciones;
+* duración;
+* estabilidad;
+* consistencia;
+* exposición;
+* calidad estadística de la muestra.
+
+### Migración futura
+
+Después del análisis histórico se preparará un único terminal MT5 portable de laboratorio sobre la cuenta Pepperstone Hedging de 100.000 USD.
+
+La migración deberá comprobar previamente:
+
+* símbolos disponibles;
+* 36 valores tecnológicos;
+* nombres físicos de símbolos;
+* contract size;
+* tick size;
+* tick value;
+* volumen mínimo/máximo;
+* margen;
+* divisas;
+* ejecución;
+* compatibilidad del código KLT con Hedging.
+
+La migración será progresiva.
+
+### Capital experimental
+
+No existe actualmente una decisión definitiva de asignar 15.000 USD a cada EA.
+
+El antiguo:
+
+`MathMin(virtual_eq, 15000.0)`
+
+es un **hardcap codificado histórico** y no debe confundirse con una futura asignación experimental de capital.
+
+Primero:
+
+**evidencia → análisis → clasificación → asignación de capital.**
+
+### Pendientes
+
+* Inventariar físicamente los tres terminales.
+* Identificar exactamente la estructura de cada terminal.
+* Extraer el histórico directamente desde MT5.
+* Normalizar los datos.
+* Auditar la extracción.
+* Analizar los cinco EAs.
+* Determinar la calidad estadística de las muestras.
+* Diseñar la arquitectura del terminal único.
+* Validar Pepperstone antes de migrar.
+* Incorporar posteriormente los nuevos EAs previstos para AUXUSD y EURUSD.
+
+### SSOT relevantes
+
+* `ssot_mt5.txt`
+* `ssot_trading.txt`
+* `ssot_global.txt`
+
+### Siguiente acción
+
+**Extraer y auditar el histórico real de los tres terminales MT5 sin modificar los EAs y sin utilizar Telegram como fuente primaria.**
+
+---
+
+## 2.2 KAIROSBUILDER / KNOWLEDGE COMPILER
+
+### Misión
+
+Desarrollar y mantener la infraestructura que transforma la documentación institucional en conocimiento estructurado y artefactos utilizables por KairosLogic.
+
+### Estado actual
+
+En evolución.
+
+La arquitectura documental y del Knowledge Compiler continúa siendo objeto de saneamiento y consolidación.
+
+### Objetivo
+
+Mantener separadas:
+
+* documentación;
+* conocimiento;
+* compilación;
+* artefactos;
+* visualización.
+
+### Pendientes
+
+* Consolidar la arquitectura definitiva.
+* Verificar qué componentes existen realmente.
+* Evitar asumir que un componente documentado ya está implementado.
+* Mantener trazabilidad entre ADR, SSOT, código y artefactos.
+* Determinar qué partes del Knowledge Compiler están operativas y cuáles son todavía diseño.
+
+### SSOT relevantes
+
+* `ssot_builder.txt`
+* `ssot_global.txt`
+* `ssot_infrastructure.txt`
+
+### Siguiente acción
+
+Verificar físicamente el estado actual de KairosBuilder y del Knowledge Compiler antes de realizar nuevas decisiones arquitectónicas.
+
+---
+
+## 2.3 SANEAMIENTO Y CONSOLIDACIÓN DE ADRs
+
+### Misión
+
+Sanear el corpus institucional de ADRs para eliminar contradicciones, duplicidades, decisiones obsoletas y pérdida de rumbo documental.
+
+### Chats IA
+ChatGPT: KairosLogic ADR Saneamiento
+Gemini Notebook: KairosADR
+
+### Estado actual
+
+Trabajo activo.
+
+Existe un corpus que actualmente llega hasta:
+
+`ADR-098`
+
+Los ADR están almacenados físicamente bajo:
+
+`C:\SSOT\ADR\`
+
+Existe además un cuaderno de Gemini Notebook que contiene el corpus completo de ADRs y se utiliza como herramienta de investigación documental.
+
+### Metodología
+
+El chat de ChatGPT encargado de este subproyecto actúa como **director y supervisor**.
+
+Gemini Notebook debe utilizarse como herramienta de investigación sobre los documentos.
+
+ChatGPT debe:
+
+* determinar qué investigación hace falta;
+* generar las instrucciones concretas para Gemini;
+* analizar las respuestas obtenidas;
+* contrastarlas con el SSOT;
+* decidir qué conclusiones están suficientemente demostradas;
+* y solo entonces proponer cambios.
+
+Gemini no debe modificar unilateralmente la arquitectura institucional.
+
+### ADR-088
+
+`ADR-088 — Canonical ADR Format`
+
+establece el formato canónico de los ADR.
+
+Antes de modificar masivamente el corpus se debe determinar si existe actualmente algún consumidor físico del formato, especialmente:
+
+* Knowledge Compiler;
+* parsers;
+* scripts;
+* automatizaciones;
+* herramientas que lean `related`;
+* procesos de `C:\SSOT\ADR\`.
+
+No debe asumirse que existe un consumidor simplemente porque un ADR lo mencione.
+
+### Relaciones `related`
+
+Se ha realizado un mapeo preventivo de candidatos a relaciones cruzadas.
+
+Todavía no debe realizarse una modificación masiva del campo `related`.
+
+Primero debe completarse el saneamiento institucional.
+
+### Pendientes
+
+* Revisar ADRs antiguos.
+* Identificar duplicidades.
+* Identificar contradicciones.
+* Identificar decisiones superseded.
+* Identificar ADRs que deben consolidarse.
+* Revisar la jerarquía institucional.
+* Verificar ADR-088.
+* Verificar consumidores reales del formato ADR.
+* Reconstruir posteriormente las relaciones `related`.
+* Consolidar el corpus final.
+
+### SSOT relevantes
+
+* `ssot_governance.txt`
+* `ssot_global.txt`
+* `ssot.txt`
+
+### Siguiente acción
+
+Continuar el saneamiento sistemático del corpus sin modificar relaciones ni Front Matter hasta que las decisiones supervivientes estén determinadas.
+
+---
+
+## 2.4 MEMORIA INSTITUCIONAL / KNOWLEDGE CORE
+
+### Misión
+
+Preservar el conocimiento institucional permanente de KairosLogic independientemente de las IAs, herramientas o plataformas utilizadas.
+
+### Estado actual
+
+La arquitectura institucional ya dispone de:
+
+* SSOT principal;
+* SSOT temáticos;
+* ADR;
+* Knowledge Core;
+* documentación institucional.
+
+### Principio fundamental
+
+La IA no constituye la memoria institucional.
+
+La IA es una herramienta que consulta, analiza y ayuda a desarrollar el conocimiento.
+
+La memoria institucional pertenece al sistema documental externo.
+
+### Estructura actual de conocimiento
+
+Existe un SSOT principal y varios SSOT especializados por temática.
+
+Entre ellos:
+
+* `ssot.txt`
+* `ssot_ai.txt`
+* `ssot_builder.txt`
+* `ssot_global.txt`
+* `ssot_governance.txt`
+* `ssot_infrastructure.txt`
+* `ssot_mt5.txt`
+* `ssot_trading.txt`
+
+### Pendientes
+
+* Consolidar el Knowledge Core.
+* Mantener coherencia entre SSOT principal y SSOT temáticos.
+* Finalizar el saneamiento de ADRs.
+* Mantener trazabilidad institucional.
+* Evitar que decisiones provisionales entren accidentalmente en el conocimiento permanente.
+
+### SSOT relevantes
+
+* `ssot.txt`
+* `ssot_global.txt`
+* `ssot_governance.txt`
+
+### Siguiente acción
+
+Continuar el saneamiento institucional antes de realizar nuevas consolidaciones importantes de conocimiento.
+
+---
+
+## 2.5 DISEÑO DE MEMORIA TEMPORAL KAIROSLOGIC
+
+### Misión
+
+Crear una memoria temporal externa a cualquier IA que permita que ChatGPT, Gemini, Claude, DeepSeek y las IAs locales puedan continuar el trabajo desde el estado dejado por otra conversación.
+
+### Chats IA
+ChatGPT: Diseño Memoria Temporal KairosLogic
+
+### Estado actual
+
+**Avance importante.**
+
+Existe un repositorio público de GitHub:
+
+`https://github.com/kairoslogictrading-code/snapshot`
+
+que permite servir un `snapshot.txt` accesible online.
+
+### Principio
+
+La memoria temporal no es conocimiento institucional.
+
+Debe conservar:
+
+* contexto operativo;
+* estado de trabajo;
+* avances;
+* pendientes;
+* hipótesis;
+* decisiones temporales;
+* bloqueos;
+* siguiente acción.
+
+### Infraestructura existente
+
+* `C:\SSOT`
+* Google Drive sincronizado con `C:\SSOT`
+* VPS disponible 24/7
+* GitHub como mecanismo actualmente probado para acceso remoto al snapshot
+* acceso desde dispositivos móviles
+
+### Estado demostrado
+
+El snapshot ha podido ser leído externamente.
+
+Se ha comprobado su lectura desde:
+
+* ChatGPT;
+* DeepSeek.
+
+La actualización puede realizarla Manuel manualmente desde el móvil.
+
+### Decisiones actuales
+
+#### D-001
+
+Mantener la memoria temporal separada del SSOT.
+
+#### D-002
+
+Utilizar inicialmente un único snapshot como punto de continuidad.
+
+#### D-003
+
+No introducir todavía:
+
+* Mem0;
+* embeddings;
+* vector DB;
+* grafos;
+* SQLite;
+* MCP;
+* infraestructura adicional;
+
+salvo que aparezca una necesidad real.
+
+### Hipótesis abiertas
+
+* GitHub podría ser suficiente como almacenamiento remoto inicial.
+* El VPS podría convertirse posteriormente en punto de acceso permanente.
+* El snapshot podría evolucionar posteriormente si la experiencia demuestra que un único fichero resulta insuficiente.
+* Podrían establecerse mecanismos automáticos de actualización en el futuro.
+
+### Objetivo actual
+
+Convertir `snapshot.txt` en un **mapa operativo de bajo consumo de tokens**.
+
+El snapshot debe permitir:
+
+`IA nueva → snapshot → identifica subproyecto → consulta SSOT relevante → trabaja`
+
+### Regla de SSOT
+
+Cada subproyecto debe indicar explícitamente qué SSOT debe consultar.
+
+La IA no debe leer todos los SSOT por defecto.
+
+Debe consultar únicamente los relevantes para la tarea.
+
+### Pendientes
+
+* Definir estructura definitiva del snapshot.
+* Incorporar todos los subproyectos.
+* Definir metodología de actualización.
+* Mantener el snapshot actualizado manualmente inicialmente.
+* Determinar si posteriormente merece la pena automatizar la actualización.
+* Investigar MCP/API solamente si aparece una necesidad real.
+
+### SSOT relevantes
+
+* `ssot_ai.txt`
+* `ssot_global.txt`
+* `ssot_builder.txt`
+
+### Siguiente acción
+
+Finalizar la estructura multi-subproyecto de `snapshot.txt` y comenzar a utilizarlo como estado operativo común entre IAs.
+
+---
+
+## 2.6 INFRAESTRUCTURA E IA
+
+### Misión
+
+Desarrollar la infraestructura que permita utilizar múltiples IAs de forma coordinada manteniendo la independencia del conocimiento institucional.
+
+### Infraestructura conocida
+
+#### VPS
+
+* infraestructura permanente;
+* disponible 24/7;
+* aloja componentes institucionales;
+* no debe convertirse innecesariamente en laboratorio pesado de IA.
+
+#### Power-Laboratory
+
+Entorno destinado al trabajo pesado de IA.
+
+Incluye:
+
+* Docker Desktop;
+* Ollama;
+* Open WebUI;
+* modelos locales.
+
+### Principio
+
+Las IAs y sus plataformas son herramientas intercambiables.
+
+KairosLogic no debe depender institucionalmente de:
+
+* ChatGPT;
+* Gemini;
+* Claude;
+* DeepSeek;
+* Ollama;
+* Open WebUI;
+* ni de un modelo concreto.
+
+### Pendientes
+
+* Consolidar arquitectura multi-IA.
+* Mantener separación entre memoria institucional y herramientas de IA.
+* Definir mecanismos de adquisición de contexto.
+* Evitar infraestructura innecesaria.
+* Coordinar esta línea con la memoria temporal.
+
+### SSOT relevantes
+
+* `ssot_ai.txt`
+* `ssot_infrastructure.txt`
+* `ssot_global.txt`
+
+### Siguiente acción
+
+Continuar el diseño de interoperabilidad entre IAs utilizando primero mecanismos simples y verificables.
+
+---
+
+# 3. REGLAS TRANSVERSALES
+
+## 3.1 Evidencia antes que afirmaciones
+
+Una afirmación de una IA sobre código, infraestructura o estado operativo que no haya sido inspeccionado físicamente debe considerarse:
+
+**hipótesis, no hecho.**
+
+Antes de actuar:
+
+**localizar → inspeccionar → verificar → decidir.**
+
+---
+
+## 3.2 Separación de capas
+
+KairosLogic distingue:
+
+### Institución
+
+* ADR
+* Knowledge Core
+* SSOT
+* conocimiento consolidado
+
+### Laboratorio
+
+* MT5
+* EAs
+* Magic Numbers
+* configuraciones
+
+### Evidencia
+
+* operaciones;
+* históricos;
+* telemetría;
+* métricas;
+* Research.
+
+### Memoria temporal
+
+* estado vivo;
+* contexto;
+* pendientes;
+* hipótesis;
+* decisiones provisionales.
+
+Estas capas no deben confundirse.
+
+---
+
+## 3.3 Regla de consulta documental
+
+Una IA debe:
+
+1. leer `snapshot.txt`;
+2. identificar el subproyecto relevante;
+3. consultar los SSOT indicados por ese subproyecto;
+4. consultar ADRs cuando la cuestión sea arquitectónica;
+5. consultar código o evidencia física cuando sea necesario verificar la realidad;
+6. distinguir siempre entre hecho, hipótesis y decisión.
+
+No debe leer indiscriminadamente todo el corpus institucional.
+
+---
+
+## 3.4 Cambios de estado
+
+Cuando un trabajo produzca un cambio material en un subproyecto, debe poder expresarse mediante:
+
+```text
+SUBPROYECTO:
+CAMBIO:
+COMPLETADO:
+PENDIENTE:
+BLOQUEOS:
+DECISIONES REQUERIDAS:
+ACTUALIZACIÓN DE SNAPSHOT NECESARIA: SÍ/NO
+```
+
+Si la actualización es necesaria, la IA debe proporcionar el texto exacto que Manuel puede incorporar al snapshot.
+
+La IA **no debe modificar silenciosamente `snapshot.txt`, SSOT o ADRs**.
+
+---
+
+# 4. HISTORIAL RECIENTE
+
+## 2026-08-13
+
+* Se consolidó la misión del subproyecto de Flota de EAs y Laboratorio MT5.
+* Se decidió utilizar los tres terminales actuales como fuente primaria de evidencia histórica.
+* Se descartó utilizar Telegram como fuente primaria de operaciones.
+* Se decidió preparar posteriormente un terminal MT5 único sobre Pepperstone Hedging.
+* Se mantuvo abierta la decisión sobre asignación de capital experimental.
+
+## 2026-08-14
+
+* Se avanzó en el diseño de la Memoria Temporal Multi-IA.
+* Se confirmó la necesidad de una memoria externa a las IAs.
+* Se investigó GitHub como almacenamiento remoto sencillo.
+* Se confirmó la existencia de `C:\SSOT` sincronizado con Google Drive.
+* Se confirmó la disponibilidad de infraestructura VPS 24/7.
+
+## 2026-08-15
+
+* Se crearon / consolidaron chats especializados para:
+
+  * Flota de EAs y Laboratorio MT5;
+  * Diseño de Memoria Temporal;
+  * Saneamiento y Consolidación de ADRs.
+* Se incorporó al cuaderno de Gemini Notebook el corpus completo de ADRs hasta ADR-098.
+* Se profundizó en ADR-088 y en la cuestión de los consumidores reales del formato canónico.
+* Se realizó un mapeo preventivo de relaciones `related`.
+
+## 2026-08-16
+
+* Se consolidó el repositorio GitHub de memoria temporal.
+* `snapshot.txt` puede ser leído externamente por diferentes IAs.
+* Se comprobó la lectura desde ChatGPT.
+* Se comprobó la lectura desde DeepSeek.
+* Manuel puede actualizar el snapshot manualmente desde el móvil.
+* Se está diseñando una estructura multi-subproyecto para el snapshot.
+* El objetivo inmediato es mantener el snapshot pequeño, operativo y barato de consultar.
+
+---
+
+# 5. ESTADO DE PRIORIDADES
+
+### PRIORIDAD 1
+
+**Saneamiento y consolidación de ADRs**
+
+Determinar qué conocimiento institucional sigue vigente antes de continuar ampliándolo.
+
+### PRIORIDAD 2
+
+**Flota de EAs y Laboratorio MT5**
+
+Extraer y analizar el histórico real de los tres terminales antes de diseñar definitivamente la distribución del terminal único.
+
+### PRIORIDAD 3
+
+**Memoria Temporal Multi-IA**
+
+Mantener y perfeccionar el snapshot como mecanismo práctico de continuidad entre IAs.
+
+### PRIORIDAD 4
+
+**KairosBuilder / Knowledge Compiler**
+
+Continuar su evolución una vez que las decisiones institucionales y documentales estén suficientemente consolidadas.
+
+### PRIORIDAD 5
+
+**Infraestructura e IA**
+
+Continuar la evolución de la interoperabilidad multi-IA sin introducir complejidad que todavía no sea necesaria.
+
+### PRIORIDAD 6
+
+**Knowledge Core / Institución**
+
+Mantener la consolidación institucional y su coherencia con el saneamiento de ADRs.
+
+---
+
+# 6. PRINCIPIO FINAL
+
+KairosLogic no debe evolucionar simplemente acumulando código, herramientas o documentos.
+
+Debe evolucionar preservando:
+
+**conocimiento → arquitectura → evidencia → aprendizaje → nuevas decisiones.**
+
+La memoria temporal permite conservar el estado vivo.
+
+Los SSOT conservan el conocimiento.
+
+Los ADR conservan las decisiones arquitectónicas.
+
+El laboratorio produce evidencia.
+
+Las IAs ayudan a analizar y desarrollar el sistema.
+
+Ninguna IA constituye por sí misma la memoria de KairosLogic.
