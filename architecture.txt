@@ -1,0 +1,422 @@
+# KAIROSLOGIC ARCHITECTURE
+
+Última actualización: 2026-09-12
+
+Propósito:
+
+Describir la arquitectura global de KairosLogic de forma resumida y comprensible.
+
+Este documento NO sustituye al SSOT.
+
+Este documento NO sustituye a los ADR.
+
+Su función es proporcionar contexto arquitectónico rápido a humanos e IAs.
+
+====================================================================
+PRINCIPIO FUNDAMENTAL
+====================================================================
+
+KairosLogic no es un sistema de trading.
+
+KairosLogic es un sistema institucional de:
+
+- conocimiento;
+- investigación;
+- arquitectura;
+- validación;
+- ejecución.
+
+El trading es únicamente una de las capas finales del sistema.
+
+La evolución conceptual identificada es:
+
+Plain Text
+↓
+Código
+↓
+Trading
+
+↓
+
+Plain Text
+↓
+Investigación
+↓
+Código
+↓
+Trading
+
+↓
+
+Plain Text
+↓
+Conocimiento
+↓
+Arquitectura
+↓
+Código
+↓
+Trading
+
+====================================================================
+CAPAS PRINCIPALES
+====================================================================
+
+KairosLogic se estructura en cuatro capas:
+
+1. Institución
+2. Laboratorio
+3. Evidencia
+4. Memoria Temporal
+
+Estas capas deben permanecer separadas.
+
+====================================================================
+CAPA 1
+INSTITUCIÓN
+====================================================================
+
+Misión:
+
+Preservar el conocimiento permanente.
+
+Componentes:
+
+- ADR
+- Knowledge Core
+- SSOT
+- Documentación institucional
+
+Principio:
+
+La memoria institucional nunca debe depender de una IA concreta.
+
+Ubicación principal:
+
+C:\SSOT
+
+====================================================================
+CAPA 2
+LABORATORIO
+====================================================================
+
+Misión:
+
+Experimentar, investigar y validar.
+
+Componentes:
+
+- MT5 Demo
+- Expert Advisors
+- Backtesting
+- Investigación
+- IA local
+
+Ubicación principal:
+
+C:\KairosLab
+
+Principio:
+
+El laboratorio puede equivocarse.
+
+La institución no.
+
+====================================================================
+CAPA 3
+EVIDENCIA
+====================================================================
+
+Misión:
+
+Generar evidencia objetiva.
+
+Fuentes:
+
+- Histórico MT5
+- Operaciones
+- Telemetría
+- Métricas
+- Resultados de investigación
+
+Principio:
+
+La evidencia tiene prioridad sobre opiniones o hipótesis.
+
+Secuencia:
+
+Hipótesis
+↓
+Experimento
+↓
+Evidencia
+↓
+Conclusión
+
+====================================================================
+CAPA 4
+MEMORIA TEMPORAL
+====================================================================
+
+Misión:
+
+Permitir continuidad entre conversaciones e IAs.
+
+Componentes:
+
+- snapshot.txt
+- projects.txt
+- roadmap.txt
+- decisions.txt
+- architecture.txt
+
+Principio:
+
+La memoria temporal NO es memoria institucional.
+
+Función:
+
+Estado operativo vivo.
+
+====================================================================
+ARQUITECTURA DEL CONOCIMIENTO
+====================================================================
+
+CONOCIMIENTO INSTITUCIONAL
+
+ADR
+↓
+Knowledge Core
+↓
+SSOT
+
+MEMORIA TEMPORAL
+
+Snapshot
+↓
+Estado operativo actual
+
+Principio:
+
+Una decisión temporal no debe entrar directamente en el SSOT.
+
+====================================================================
+ARQUITECTURA MULTI-IA
+====================================================================
+
+Objetivo:
+
+Permitir que múltiples IAs colaboren sin convertirse en la memoria institucional.
+
+IAs utilizadas:
+
+- ChatGPT
+- Gemini
+- DeepSeek
+- Claude
+- Modelos locales
+
+Principio:
+
+Las IAs son intercambiables.
+
+KairosLogic no debe depender de ninguna IA concreta.
+
+====================================================================
+ARQUITECTURA DE MEMORIA
+====================================================================
+
+MEMORIA PERMANENTE
+
+C:\SSOT
+
+Contiene:
+
+- ADR
+- Knowledge Core
+- SSOT
+
+MEMORIA TEMPORAL
+
+Repositorio Snapshot
+
+Contiene:
+
+- estado actual
+- proyectos
+- roadmap
+- decisiones
+- arquitectura
+
+Principio:
+
+Permanente y temporal deben permanecer desacopladas.
+
+====================================================================
+ARQUITECTURA DE IA LOCAL
+====================================================================
+
+POWER-LABORATORY
+
+Componentes:
+
+- Docker Desktop
+- Ollama
+- Open WebUI
+- Modelos locales
+
+Misión:
+
+Investigación y experimentación.
+
+Principio:
+
+No depender estructuralmente de proveedores externos.
+
+====================================================================
+ARQUITECTURA MT5
+====================================================================
+
+LABORATORIO
+
+C:\KairosLab
+
+Objetivo:
+
+Pruebas y validación.
+
+PRODUCCIÓN
+
+C:\KairosLogic
+
+Objetivo:
+
+Operación real.
+
+Principio:
+
+Separación física entre Demo y Real.
+
+====================================================================
+ARQUITECTURA DE SCRIPTS
+====================================================================
+
+Ubicación objetivo:
+
+C:\SSOT\Scripts
+
+Objetivo:
+
+Evitar múltiples copias dispersas.
+
+Principio:
+
+Una única versión de referencia.
+
+====================================================================
+ARQUITECTURA DE TELEMETRÍA
+====================================================================
+
+MetaTrader 5
+↓
+Datos estructurados
+↓
+Procesamiento
+↓
+Bunker Kairos
+↓
+Narrativa IA
+
+Separación fundamental:
+
+Determinístico
+
+- PnL
+- Sharpe
+- Drawdown
+- Profit Factor
+- Win Rate
+
+IA
+
+- Interpretación
+- Resumen
+- Narrativa
+
+====================================================================
+ARQUITECTURA DE EAs
+====================================================================
+
+FAMILIA KLT
+
+Mercado:
+
+Nasdaq
+
+Características:
+
+- Momentum
+- Breadth Shield
+- Macro Filter
+- Top-N
+
+FAMILIA KLEA
+
+Mercado:
+
+ASX
+
+Características:
+
+- Commodity Momentum Gate
+- Energía
+- Minería
+
+Principio:
+
+KLT y KLEA son sistemas independientes.
+
+====================================================================
+ARQUITECTURA DE PRODUCCIÓN FUTURA
+====================================================================
+
+Conocimiento Institucional
+↓
+Arquitectura consolidada
+↓
+KLT / KLEA validados
+↓
+Telemetría validada
+↓
+Broker validado
+↓
+Validación Demo
+↓
+Cuenta Real
+
+====================================================================
+ESTADO ACTUAL
+====================================================================
+
+KairosLogic se encuentra actualmente en transición entre:
+
+- consolidación documental;
+- auditoría de EAs;
+- telemetría;
+- simplificación MT5;
+- selección de broker.
+
+La elección del broker es actualmente uno de los principales
+desbloqueadores de la siguiente fase de producción.
+
+====================================================================
+REGLA FINAL
+====================================================================
+
+Ninguna IA constituye la memoria de KairosLogic.
+
+La memoria institucional pertenece al sistema documental.
+
+Las IAs ayudan a investigar, analizar e implementar.
+
+Las decisiones pertenecen al Arquitecto Humano.
