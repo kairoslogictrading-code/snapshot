@@ -1,0 +1,129 @@
+# KAIROSLOGIC - BROKERS
+
+Última actualización: 2026-09-12
+Estado: Investigación activa
+
+---
+
+# MISIÓN
+
+Seleccionar la infraestructura broker que permita operar KLT y KLEA en entorno real manteniendo compatibilidad con la arquitectura KairosLogic.
+
+La decisión de broker condiciona:
+
+- MT5 Real
+- KLT
+- KLEA
+- Portabilidad
+- Telemetría
+- Bunker Kairos
+- Producción futura
+
+---
+
+# PRINCIPIOS
+
+1. No modificar KLEA para adaptarlo a un broker concreto.
+
+2. No tomar decisiones de producción sin validación previa en demo.
+
+3. El broker debe adaptarse a la arquitectura siempre que sea posible.
+
+4. La compatibilidad ASX sigue siendo un requisito importante.
+
+5. La validación debe basarse en evidencia técnica y no únicamente en marketing.
+
+---
+
+# SITUACIÓN ACTUAL
+
+## Pepperstone
+
+Estado:
+Candidato principal actualmente.
+
+Ventajas observadas:
+
+- MT5
+- Hedging
+- Compatibilidad demostrada con KLEA Demo
+- Compatibilidad con ASX
+- Infraestructura conocida
+
+Pendientes:
+
+- Verificar condiciones para clientes españoles.
+- Analizar acceso profesional.
+- Validar viabilidad para producción.
+
+---
+
+## IC Markets
+
+Estado:
+Cuestionado.
+
+Problemas detectados:
+
+- Dudas sobre ASX.
+- Dudas sobre entorno minorista.
+- No considerado actualmente candidato prioritario.
+
+---
+
+# LÍNEA DE TRABAJO ACTUAL
+
+NO decidir todavía.
+
+Secuencia aprobada:
+
+Investigación broker
+↓
+Validación demo
+↓
+Pruebas de portabilidad
+↓
+Comparación
+↓
+Decisión
+↓
+Cuenta real
+
+---
+
+# PRUEBAS DE PORTABILIDAD FUTURAS
+
+Para KLT:
+
+- símbolos
+- histórico
+- ATR
+- lotes
+- stop level
+- tick value
+- ejecución
+
+Para KLEA:
+
+- universo ASX
+- histórico
+- ATR
+- sizing
+- SL físico
+- ejecución
+
+---
+
+# PENDIENTES
+
+- Investigar Pepperstone Professional.
+- Buscar alternativas retail compatibles con ASX.
+- Diseñar protocolo de validación.
+- Ejecutar pruebas demo.
+- Emitir recomendación final.
+
+---
+
+# ESTADO
+
+Prioridad alta.
