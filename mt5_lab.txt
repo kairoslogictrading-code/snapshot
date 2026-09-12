@@ -1,0 +1,110 @@
+# KAIROSLOGIC - MT5 LABORATORY
+
+Última actualización: 2026-09-12
+Estado: Activo
+
+---
+
+# MISIÓN
+
+Mantener un entorno controlado de experimentación y validación para EAs antes de cualquier despliegue real.
+
+---
+
+# PRINCIPIO FUNDAMENTAL
+
+Separación física y conceptual entre:
+
+LABORATORIO
+y
+PRODUCCIÓN
+
+---
+
+# ESTRUCTURA OBJETIVO
+
+C:\KairosLab\
+    MT5_Demo\
+
+C:\KairosLogic\
+    MT5\
+        Real\
+
+---
+
+# DECISIONES
+
+KairosLab representa exclusivamente:
+
+- pruebas
+- investigación
+- validación
+- experimentación
+
+No debe convertirse en producción.
+
+---
+
+# ESTADO ACTUAL
+
+Existen tres terminales MT5 portables.
+
+Ubicación:
+
+C:\KairosLab\
+
+Estos terminales constituyen actualmente la principal fuente de evidencia histórica.
+
+---
+
+# OBJETIVO INMEDIATO
+
+Inventariar:
+
+- terminales
+- cuentas
+- símbolos
+- EAs
+- configuraciones
+
+Extraer histórico real.
+
+---
+
+# OBJETIVO FUTURO
+
+Migrar progresivamente hacia:
+
+1 terminal MT5 Demo principal
+
+manteniendo separación respecto al futuro terminal real.
+
+---
+
+# ESTRUCTURA PREVISTA
+
+C:\SSOT\
+    Scripts\
+
+C:\KairosLab\
+    MT5_Demo\
+
+C:\KairosLogic\
+    MT5\
+        Real\
+
+---
+
+# PENDIENTES
+
+- Inventario físico.
+- Extracción histórica.
+- Validación Pepperstone.
+- Diseño definitivo del terminal único.
+- Preparación de producción.
+
+---
+
+# ESTADO
+
+Prioridad alta.
