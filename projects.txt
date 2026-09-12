@@ -1,0 +1,459 @@
+# KAIROSLOGIC PROJECTS
+
+Última actualización: 2026-09-12
+
+Propósito:
+Mantener una visión global del estado real de todas las líneas de trabajo activas.
+
+Este documento NO es memoria institucional.
+
+Este documento NO sustituye al SSOT.
+
+Este documento NO sustituye a los ADR.
+
+Representa únicamente el estado operativo actual del proyecto.
+
+====================================================================
+PROYECTO 01
+SSOT / ADR / CONOCIMIENTO INSTITUCIONAL
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Sanear y consolidar el conocimiento institucional de KairosLogic.
+
+ALCANCE:
+
+- Auditoría ADR-001 → ADR-098
+- Eliminación de duplicidades
+- Identificación de contradicciones
+- Reconstrucción histórica de decisiones
+- Revisión de ADR-088
+- Revisión de relaciones related
+- Validación de consumidores reales del formato ADR
+
+PRIORIDAD:
+MUY ALTA
+
+PENDIENTES:
+
+- Continuar auditoría sistemática
+- Identificar ADR superseded
+- Verificar dependencias reales
+- Consolidar relaciones related
+- Definir estructura final del corpus
+
+RIESGOS:
+
+- Institucionalizar decisiones incorrectas
+- Mantener ADR contradictorios
+- Romper consumidores existentes
+
+SIGUIENTE ACCIÓN:
+
+Continuar saneamiento documental antes de realizar cambios masivos.
+
+====================================================================
+PROYECTO 02
+MEMORIA TEMPORAL MULTI-IA
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Permitir continuidad entre ChatGPT, Gemini, Claude, DeepSeek e IAs locales.
+
+PRINCIPIOS:
+
+- Separación respecto al SSOT
+- Bajo consumo de tokens
+- Accesible desde móvil
+- Accesible desde cualquier IA
+- Sin dependencia de proveedor
+
+INFRAESTRUCTURA ACTUAL:
+
+- GitHub Snapshot Repository
+- snapshot.txt
+- Google Drive
+- C:\SSOT
+- VPS
+
+DECISIONES VIGENTES:
+
+D-001 Separación SSOT / Memoria Temporal
+D-002 Snapshot único inicial
+D-003 No introducir complejidad prematura
+
+LÍNEAS ABIERTAS:
+
+- Reestructuración del snapshot
+- Separación por proyectos
+- Mejora de continuidad entre IAs
+
+SIGUIENTE ACCIÓN:
+
+Crear estructura modular de memoria temporal.
+
+====================================================================
+PROYECTO 03
+LABORATORIO IA
+====================================================================
+
+ESTADO:
+OPERATIVO
+
+OBJETIVO:
+
+Mantener un entorno independiente para investigación y experimentación.
+
+INFRAESTRUCTURA:
+
+- Power-Laboratory
+- Docker Desktop
+- Ollama
+- Open WebUI
+- Modelos locales
+
+PRINCIPIO:
+
+KairosLogic no debe depender estructuralmente de ningún proveedor concreto de IA.
+
+SIGUIENTE ACCIÓN:
+
+Consolidar arquitectura multi-IA.
+
+====================================================================
+PROYECTO 04
+AUDITORÍA KLT
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Auditar completamente la familia KLT antes de consolidar la nueva arquitectura MT5.
+
+ÁMBITO:
+
+- KLT v3.06
+- KLT v3.07
+- KLT v3.08
+
+PUNTOS CRÍTICOS:
+
+- Universo de símbolos
+- Momentum
+- ATR
+- Top-N
+- Holding Period
+- SL físico
+- Breadth Shield
+- Macro Filter
+- Magic Isolation
+
+RIESGOS:
+
+- Operar con universo incompleto
+- Inconsistencias entre versiones
+- Dependencias ocultas
+
+SIGUIENTE ACCIÓN:
+
+Continuar auditoría y validación documental.
+
+====================================================================
+PROYECTO 05
+AUDITORÍA KLEA
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Consolidar la arquitectura KLEA como sistema independiente.
+
+ESTADO ARQUITECTÓNICO:
+
+- Clean Architecture RC7.1
+- Commodity Momentum Gate
+- Sin Breadth Shield
+
+PUNTOS YA RESUELTOS:
+
+- SL físico
+- Barra cerrada
+- Magic isolation
+- Telemetría
+
+SIGUIENTE ACCIÓN:
+
+Completar auditoría documental y validar portabilidad.
+
+====================================================================
+PROYECTO 06
+BUNKER KAIROS Y TELEMETRÍA
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Convertir datos MT5 en métricas determinísticas y narrativa operativa.
+
+SEPARACIÓN:
+
+Determinístico:
+- PnL
+- Profit Factor
+- Drawdown
+- Sharpe
+- Win Rate
+- Curvas
+
+IA:
+- Interpretación
+- Narrativa
+- Explicación
+
+SIGUIENTE ACCIÓN:
+
+Completar arquitectura de cálculo independiente de IA.
+
+====================================================================
+PROYECTO 07
+FORENSE HISTÓRICO MT5
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Reconstruir métricas históricas reales desde MT5.
+
+HALLAZGOS:
+
+- Histórico disponible
+- Magic Numbers válidos
+- Deals presentes
+
+PROBLEMA IDENTIFICADO:
+
+Selección temporal incorrecta.
+
+SIGUIENTE ACCIÓN:
+
+Finalizar reconstrucción histórica.
+
+====================================================================
+PROYECTO 08
+SIMPLIFICACIÓN MT5
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Reducir complejidad operacional.
+
+ARQUITECTURA OBJETIVO:
+
+LABORATORIO
+
+C:\KairosLab\
+    MT5_Demo
+
+PRODUCCIÓN
+
+C:\KairosLogic\
+    MT5\
+        Real
+
+SCRIPTS
+
+C:\SSOT\Scripts
+
+DECISIONES:
+
+- Separación física Demo / Real
+- Scripts comunes centralizados
+
+SIGUIENTE ACCIÓN:
+
+Esperar decisión de broker antes de cristalizar producción.
+
+====================================================================
+PROYECTO 09
+BROKER CUENTA REAL
+====================================================================
+
+ESTADO:
+PRIORIDAD ACTUAL
+
+OBJETIVO:
+
+Seleccionar broker compatible con KLT y KLEA.
+
+SITUACIÓN ACTUAL:
+
+Pepperstone:
+- Compatible
+- Pendiente análisis profesional
+
+IC Markets:
+- Dudas importantes sobre ASX
+
+PENDIENTES:
+
+- Validar Pepperstone Professional
+- Buscar alternativa retail compatible ASX
+- Pruebas de compatibilidad
+
+SIGUIENTE ACCIÓN:
+
+Completar investigación de broker.
+
+====================================================================
+PROYECTO 10
+VALIDACIÓN DE PORTABILIDAD
+====================================================================
+
+ESTADO:
+PENDIENTE
+
+OBJETIVO:
+
+Verificar funcionamiento de los EAs en broker candidato.
+
+ALCANCE:
+
+- Símbolos
+- Histórico
+- ATR
+- Contract Size
+- Tick Value
+- Min Lot
+- Stop Level
+- Ejecución
+
+SIGUIENTE ACCIÓN:
+
+Esperar decisión de broker.
+
+====================================================================
+PROYECTO 11
+RISK MANAGEMENT
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Documentar correctamente los límites reales del riesgo.
+
+PRINCIPIO:
+
+SL físico != garantía absoluta de pérdida máxima
+
+RIESGOS:
+
+- Gap
+- Slippage
+- Suspensión
+- Falta de liquidez
+- Dislocación de mercado
+
+SIGUIENTE ACCIÓN:
+
+Consolidar documentación de riesgo.
+
+====================================================================
+PROYECTO 12
+KAIROSBUILDER
+====================================================================
+
+ESTADO:
+EN EVOLUCIÓN
+
+OBJETIVO:
+
+Compilar el conocimiento institucional en artefactos reproducibles.
+
+ESTADO ACTUAL:
+
+RC5 certificado
+
+LÍNEAS ABIERTAS:
+
+- ADR normalizados
+- Artifact Builders
+- Renderers limpios
+- CLI unificada
+- Workbench
+
+DECISIONES PENDIENTES:
+
+- Migración Strategy → Artifact Builder
+- Consumo de ADR normalizados
+- Política de compilación
+
+SIGUIENTE ACCIÓN:
+
+Auditar estado real antes de nuevas implementaciones.
+
+====================================================================
+PROYECTOS FUTUROS
+====================================================================
+
+KLEA LLM
+ESTADO: FUTURO
+
+Broker Adapter
+ESTADO: CONCEPTUAL
+
+KLSE / RLZ
+ESTADO: INVESTIGACIÓN
+
+Nueva KLEA sin ASX
+ESTADO: CONTINGENCIA
+
+====================================================================
+SECUENCIA ESTRATÉGICA ACTUAL
+====================================================================
+
+SSOT / ADR
+↓
+Conocimiento fiable
+↓
+Arquitectura consolidada
+↓
+KLT + KLEA
+↓
+Telemetría / Bunker
+↓
+MT5 simplificado
+↓
+Broker compatible
+↓
+Validación Demo
+↓
+Cuenta Real
+
+PUNTO ACTUAL:
+
+MT5 simplificado
+↓
+Broker compatible
+↓
+Validación Demo
