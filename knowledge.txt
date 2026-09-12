@@ -1,0 +1,114 @@
+# KNOWLEDGE CORE
+
+Última actualización: 2026-09-12
+
+Estado: EN CONSOLIDACIÓN
+
+Propósito:
+Preservar el conocimiento institucional permanente de KairosLogic independientemente de herramientas, IAs o plataformas.
+
+---
+
+# MISIÓN
+
+El Knowledge Core constituye la memoria institucional consolidada.
+
+Su función es preservar:
+
+* principios;
+* conceptos;
+* patrones;
+* definiciones;
+* arquitectura;
+* terminología;
+* conocimiento validado.
+
+No debe contener:
+
+* hipótesis temporales;
+* investigaciones abiertas;
+* decisiones no aprobadas;
+* estado operativo diario.
+
+---
+
+# JERARQUÍA DE CONOCIMIENTO
+
+Conversaciones
+↓
+Memoria Temporal
+↓
+Investigación
+↓
+ADR
+↓
+Knowledge Core
+↓
+SSOT
+
+---
+
+# PRINCIPIOS
+
+## K-001
+
+La IA no es la memoria institucional.
+
+## K-002
+
+El conocimiento institucional debe sobrevivir a cualquier IA.
+
+## K-003
+
+El conocimiento validado debe poder rastrearse hasta su origen.
+
+## K-004
+
+Ningún conocimiento debe institucionalizarse sin evidencia suficiente.
+
+---
+
+# RELACIÓN CON LOS ADR
+
+Los ADR conservan decisiones.
+
+El Knowledge Core conserva conocimiento consolidado.
+
+No son equivalentes.
+
+---
+
+# RELACIÓN CON EL SSOT
+
+El SSOT representa la visión institucional vigente.
+
+El Knowledge Core constituye una de sus fuentes.
+
+---
+
+# ESTADO ACTUAL
+
+Existen:
+
+* ADR hasta ADR-098
+* SSOT principal
+* SSOT temáticos
+* documentación institucional
+
+La consolidación completa del Knowledge Core sigue en evolución.
+
+---
+
+# PENDIENTES
+
+* Consolidar terminología.
+* Eliminar contradicciones.
+* Mejorar trazabilidad.
+* Finalizar saneamiento ADR.
+* Definir estructura definitiva.
+
+---
+
+# SIGUIENTE ACCIÓN
+
+Completar el saneamiento institucional antes de ampliar el Knowledge Core.
