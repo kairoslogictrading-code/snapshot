@@ -1,0 +1,399 @@
+# KAIROSLOGIC DECISIONS
+
+Última actualización: 2026-09-12
+
+Propósito:
+
+Mantener un registro de decisiones operativas, provisionales o pendientes
+de institucionalización.
+
+Este documento NO sustituye a los ADR.
+
+Este documento NO sustituye al SSOT.
+
+Una decisión incluida aquí no implica que sea conocimiento institucional.
+
+Cuando una decisión quede formalizada mediante ADR o SSOT deberá
+actualizarse su estado.
+
+====================================================================
+ESTADOS
+====================================================================
+
+PROVISIONAL
+    Dirección de trabajo aceptada temporalmente.
+
+APROBADA
+    Aprobada operativamente por Manuel.
+
+PENDIENTE
+    Requiere validación adicional.
+
+SUPERADA
+    Ya no debe utilizarse.
+
+INSTITUCIONALIZADA
+    Ya existe ADR o SSOT equivalente.
+
+====================================================================
+D-001
+SEPARACIÓN ENTRE SSOT Y MEMORIA TEMPORAL
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+La memoria temporal y el conocimiento institucional deben mantenerse
+separados.
+
+SSOT:
+Conocimiento permanente.
+
+Memoria temporal:
+Estado operativo vivo.
+
+MOTIVACIÓN:
+
+Evitar contaminación del conocimiento institucional.
+
+SIGUIENTE PASO:
+
+Mantener ambas capas desacopladas.
+
+====================================================================
+D-002
+SNAPSHOT COMO MEMORIA TEMPORAL INICIAL
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+Utilizar inicialmente un único snapshot accesible por GitHub como
+mecanismo común de continuidad entre IAs.
+
+MOTIVACIÓN:
+
+Simplicidad.
+Acceso móvil.
+Bajo coste.
+Alta compatibilidad.
+
+SIGUIENTE PASO:
+
+Evaluar periódicamente si sigue siendo suficiente.
+
+====================================================================
+D-003
+NO INTRODUCIR COMPLEJIDAD PREMATURA
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+No incorporar todavía:
+
+- Vector DB
+- Mem0
+- Embeddings
+- MCP
+- Grafos
+- SQLite
+- Infraestructura avanzada
+
+salvo necesidad demostrada.
+
+MOTIVACIÓN:
+
+Evidence Before Scaling.
+
+====================================================================
+D-004
+SEPARACIÓN LABORATORIO / PRODUCCIÓN
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+La infraestructura de laboratorio y la infraestructura de producción
+deben estar físicamente separadas.
+
+LABORATORIO
+
+C:\KairosLab\
+
+PRODUCCIÓN
+
+C:\KairosLogic\
+
+MOTIVACIÓN:
+
+Reducir errores operativos y contaminación accidental.
+
+====================================================================
+D-005
+SCRIPTS COMUNES CENTRALIZADOS
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+Los scripts comunes de KairosLogic deben vivir en:
+
+C:\SSOT\Scripts
+
+y no repartidos entre múltiples terminales.
+
+MOTIVACIÓN:
+
+Evitar duplicidades y divergencias.
+
+====================================================================
+D-006
+NO CRISTALIZAR PRODUCCIÓN HASTA ELEGIR BROKER
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+La arquitectura definitiva de producción MT5 no debe cerrarse
+hasta finalizar la investigación de broker.
+
+MOTIVACIÓN:
+
+El broker condiciona:
+
+- símbolos
+- ejecución
+- cuentas
+- compatibilidad
+- infraestructura
+
+====================================================================
+D-007
+TELEMETRÍA DETERMINÍSTICA
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+Las métricas financieras deben calcularse por código determinístico.
+
+La IA únicamente interpreta resultados.
+
+MÉTRICAS AFECTADAS:
+
+- PnL
+- Profit Factor
+- Win Rate
+- Sharpe
+- Drawdown
+- Curvas
+
+MOTIVACIÓN:
+
+Evitar dependencia de modelos IA para cálculos críticos.
+
+====================================================================
+D-008
+TELEGRAM NO ES FUENTE PRIMARIA
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+Telegram es una herramienta de observación.
+
+No constituye la fuente primaria de operaciones ni de histórico.
+
+FUENTE PRIMARIA:
+
+MetaTrader 5.
+
+====================================================================
+D-009
+EVIDENCIA ANTES QUE AFIRMACIONES
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+Toda afirmación sobre código, infraestructura o estado operativo
+debe verificarse físicamente antes de convertirse en hecho.
+
+SECUENCIA:
+
+Localizar
+↓
+Inspeccionar
+↓
+Verificar
+↓
+Decidir
+
+====================================================================
+D-010
+NO MODIFICAR ADR MASIVAMENTE SIN AUDITORÍA PREVIA
+====================================================================
+
+ESTADO:
+APROBADA
+
+DESCRIPCIÓN:
+
+No realizar modificaciones masivas sobre ADRs hasta completar
+el saneamiento institucional.
+
+AFECTA A:
+
+- Frontmatter
+- Related
+- Renumeraciones
+- Consolidaciones
+
+MOTIVACIÓN:
+
+Evitar daños documentales difíciles de revertir.
+
+====================================================================
+D-011
+ARQUITECTURA DE MEMORIA TEMPORAL MODULAR
+====================================================================
+
+ESTADO:
+PROVISIONAL
+
+DESCRIPCIÓN:
+
+Evolucionar desde un único snapshot hacia una estructura modular
+de memoria temporal.
+
+DOCUMENTOS PREVISTOS:
+
+snapshot.txt
+projects.txt
+roadmap.txt
+decisions.txt
+
+POSIBLES FUTUROS:
+
+architecture.txt
+brokers.txt
+mt5.txt
+builder.txt
+
+MOTIVACIÓN:
+
+Reducir tokens y mejorar continuidad.
+
+====================================================================
+D-012
+ARQUITECTURA CEREBRO DUAL
+====================================================================
+
+ESTADO:
+PENDIENTE
+
+DESCRIPCIÓN:
+
+Separar explícitamente:
+
+Cerebro rápido
+    ideas
+    investigación
+    hipótesis
+
+de
+
+Cerebro lento
+    ADR
+    Knowledge Core
+    SSOT
+
+ORIGEN:
+
+Investigación Segundo Cerebro.
+
+PENDIENTE:
+
+Validación formal por Manuel.
+
+====================================================================
+D-013
+MIGRACIÓN STRATEGY → ARTIFACT BUILDER
+====================================================================
+
+ESTADO:
+PENDIENTE
+
+DESCRIPCIÓN:
+
+Evaluar sustitución del modelo Strategy por Artifact Builder
+en KairosBuilder.
+
+ORIGEN:
+
+Investigación RC4.x
+
+PENDIENTE:
+
+Auditoría arquitectónica.
+
+====================================================================
+D-014
+BROKER ADAPTER
+====================================================================
+
+ESTADO:
+PENDIENTE
+
+DESCRIPCIÓN:
+
+Evaluar arquitectura:
+
+Strategy
+↓
+Risk
+↓
+Broker Adapter
+↓
+Broker
+
+MOTIVACIÓN:
+
+Reducir dependencia del broker concreto.
+
+ESTADO:
+
+Conceptual.
+
+====================================================================
+REGLA FINAL
+====================================================================
+
+Una decisión registrada aquí NO es automáticamente
+conocimiento institucional.
+
+Para convertirse en conocimiento institucional debe:
+
+1. sobrevivir al tiempo;
+2. demostrar utilidad;
+3. superar revisión;
+4. quedar formalizada mediante ADR o SSOT.
