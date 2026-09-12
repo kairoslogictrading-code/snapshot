@@ -1,0 +1,116 @@
+# KAIROSLOGIC - ADR CLEANUP
+
+Última actualización: 2026-09-12
+Estado: Trabajo activo
+
+---
+
+# MISIÓN
+
+Sanear el corpus ADR antes de continuar ampliando la arquitectura institucional.
+
+---
+
+# OBJETIVO
+
+Determinar:
+
+- qué ADR siguen vigentes;
+- qué ADR están obsoletos;
+- qué ADR se contradicen;
+- qué ADR deben consolidarse.
+
+---
+
+# CORPUS
+
+Estado conocido:
+
+ADR-001
+↓
+ADR-098
+
+---
+
+# PRINCIPIOS
+
+No modificar ADR masivamente sin evidencia.
+
+No asumir consumidores inexistentes.
+
+No introducir relaciones artificiales.
+
+No reescribir historia institucional.
+
+---
+
+# ÁREAS DE INVESTIGACIÓN
+
+## ADR-088
+
+Canonical ADR Format
+
+Pendientes:
+
+- verificar consumidores reales;
+- verificar parsers;
+- verificar automatizaciones;
+- verificar impacto.
+
+---
+
+## Relaciones related
+
+Existe trabajo preparatorio.
+
+No ejecutar reconstrucción masiva todavía.
+
+---
+
+## Jerarquía institucional
+
+Pendiente de revisión completa.
+
+---
+
+# METODOLOGÍA
+
+ChatGPT:
+
+- dirección;
+- supervisión;
+- análisis.
+
+Gemini:
+
+- investigación documental;
+- búsqueda de evidencia.
+
+Las conclusiones deben contrastarse con SSOT.
+
+---
+
+# PENDIENTES
+
+- revisar ADR antiguos;
+- detectar duplicidades;
+- detectar contradicciones;
+- detectar superseded;
+- consolidar supervivientes;
+- revisar jerarquía;
+- verificar ADR-088;
+- reconstruir related cuando proceda.
+
+---
+
+# RESULTADO ESPERADO
+
+Corpus ADR coherente.
+Sin contradicciones relevantes.
+Preparado para futuras evoluciones institucionales.
+
+---
+
+# ESTADO
+
+Prioridad muy alta.
