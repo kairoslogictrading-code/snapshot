@@ -1,0 +1,283 @@
+# BUNKER KAIROS
+
+Última actualización: 2026-09-12
+
+Estado: EN MARCHA
+
+Propósito:
+Construir la capa de observabilidad, telemetría y análisis operativo de KairosLogic.
+
+El Bunker constituye la interfaz entre:
+
+MT5
+↓
+Datos estructurados
+↓
+Procesamiento determinístico
+↓
+Métricas
+↓
+Interpretación IA
+↓
+Supervisión humana
+
+---
+
+# MISIÓN
+
+Permitir que KairosLogic pueda comprender el estado real de sus sistemas sin depender de MetaTrader, Telegram o de una IA concreta.
+
+El Bunker debe convertirse en la fuente operativa principal para:
+
+* salud de sistemas;
+* métricas históricas;
+* evolución del capital;
+* seguimiento de posiciones;
+* análisis de resultados;
+* auditoría operativa;
+* soporte a la toma de decisiones.
+
+---
+
+# PRINCIPIOS
+
+## B-001
+
+Las métricas financieras deben calcularse de forma determinística.
+
+La IA no debe calcular:
+
+* Profit Factor
+* Sharpe
+* Drawdown
+* Win Rate
+* Expectancy
+* Equity Curve
+
+La IA únicamente interpreta.
+
+---
+
+## B-002
+
+La narrativa nunca sustituye a la evidencia.
+
+Siempre:
+
+Datos
+↓
+Métricas
+↓
+Interpretación
+
+Nunca:
+
+Interpretación
+↓
+Suposición de métricas
+
+---
+
+## B-003
+
+La telemetría debe ser independiente de cualquier broker.
+
+El Bunker debe poder trabajar con:
+
+* Pepperstone
+* Broker futuro
+* MT5
+* exportaciones CSV
+* históricos
+
+sin modificar su arquitectura básica.
+
+---
+
+# ESTADO ACTUAL
+
+La línea de trabajo está activa.
+
+Se ha identificado que los sistemas actuales generan información suficiente para reconstruir:
+
+* operaciones;
+* capital;
+* métricas;
+* resultados históricos.
+
+Sin embargo, todavía no existe una capa consolidada de observabilidad institucional.
+
+---
+
+# HALLAZGOS IMPORTANTES
+
+## Histórico MT5
+
+Se confirmó que:
+
+* los Deals históricos existen;
+* los Magic Numbers son correctos;
+* las operaciones cerradas están registradas.
+
+El problema observado de métricas cero no estaba relacionado con la ausencia de histórico.
+
+La causa identificada fue la selección temporal utilizada para reconstruir datos.
+
+---
+
+## Separación conceptual
+
+Se distinguieron dos problemas diferentes:
+
+### Registro operativo
+
+Tele_LogClosedTrades()
+
+Responsable de registrar nuevas operaciones.
+
+### Reconstrucción histórica
+
+Tele_UpdateMetrics()
+
+Responsable de recalcular métricas usando el histórico completo.
+
+Ambos procesos deben permanecer desacoplados.
+
+---
+
+# ARQUITECTURA OBJETIVO
+
+MT5
+↓
+Exportación estructurada
+↓
+CSV / JSON
+↓
+PowerShell / Procesamiento
+↓
+Bunker Kairos
+↓
+Métricas determinísticas
+↓
+Narrativa IA opcional
+
+---
+
+# MÉTRICAS OBJETIVO
+
+## Rendimiento
+
+* Beneficio neto
+* Profit Factor
+* Expectancy
+* CAGR
+* Equity Curve
+
+## Riesgo
+
+* Drawdown absoluto
+* Drawdown relativo
+* Ulcer Index
+* Volatilidad
+
+## Calidad
+
+* Win Rate
+* Average Win
+* Average Loss
+* R-Multiple
+* Sharpe
+* Sortino
+
+## Operativa
+
+* Número de operaciones
+* Duración media
+* Operaciones por símbolo
+* Operaciones por EA
+* Exposición temporal
+
+---
+
+# RELACIÓN CON LOS EAs
+
+El Bunker debe poder analizar:
+
+## Familia KLT
+
+* KLT_TN
+* KLT_TB
+* KLT_TG
+
+## Familia KLEA
+
+* KLEA_EB
+* KLEA_EN
+
+mediante Magic Numbers oficiales.
+
+---
+
+# RELACIÓN CON IA
+
+La IA podrá:
+
+* resumir resultados;
+* detectar anomalías;
+* explicar cambios;
+* generar informes;
+* producir narrativa.
+
+La IA no debe convertirse en la fuente primaria de cálculo.
+
+---
+
+# PENDIENTES
+
+* Diseñar estructura definitiva de datos.
+* Definir formato de intercambio.
+* Completar extracción histórica.
+* Construir pipeline reproducible.
+* Definir métricas oficiales.
+* Diseñar cuadros de mando.
+* Validar independencia respecto al broker.
+* Integrar posteriormente nuevos sistemas.
+
+---
+
+# SIGUIENTE ACCIÓN
+
+Completar la extracción y auditoría del histórico MT5 para disponer de una base verificable sobre la que construir las métricas oficiales del Bunker.
+
+---
+
+# RELACIÓN CON OTROS FICHEROS
+
+projects.txt
+roadmap.txt
+mt5_lab.txt
+brokers.txt
+architecture.txt
+decisions.txt
+
+---
+
+# ESTADO RESUMIDO
+
+Situación actual:
+
+MT5
+↓
+Histórico disponible
+↓
+Extracción en curso
+↓
+Diseño Bunker
+↓
+Métricas oficiales
+↓
+Narrativa IA
+
+Objetivo final:
+
+Disponer de una capa de observabilidad institucional independiente de MetaTrader, del broker y de cualquier IA concreta.
