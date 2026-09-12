@@ -1,0 +1,257 @@
+# KAIROSLOGIC SNAPSHOT
+
+Última actualización: 2026-09-12
+
+Estado global:
+Desarrollo activo.
+
+Propósito:
+Punto de entrada rápido para cualquier IA.
+Este fichero NO es el SSOT.
+Este fichero NO contiene conocimiento institucional completo.
+Este fichero únicamente indica el estado operativo actual y dónde consultar cada línea de trabajo.
+
+---
+
+# REGLA DE USO
+
+Secuencia obligatoria:
+
+1. Leer snapshot.txt
+2. Identificar el subproyecto relevante
+3. Consultar el fichero temático correspondiente
+4. Consultar SSOT y ADR únicamente si son necesarios
+5. Diferenciar siempre entre:
+   - Hecho verificado
+   - Hipótesis
+   - Decisión aprobada
+
+---
+
+# ESTADO GLOBAL
+
+KairosLogic evoluciona simultáneamente en varias líneas:
+
+- Saneamiento ADR
+- Knowledge Core
+- KairosBuilder
+- Flota MT5
+- Broker real
+- Memoria temporal multi-IA
+- Infraestructura IA
+
+Principio rector:
+
+Conocimiento
+↓
+Arquitectura
+↓
+Evidencia
+↓
+Decisiones
+↓
+Producción
+
+---
+
+# FICHEROS OPERATIVOS
+
+## projects.txt
+
+Estado detallado de todos los subproyectos activos.
+
+Consultar para:
+- prioridades
+- estado actual
+- bloqueos
+- próximos pasos
+
+---
+
+## roadmap.txt
+
+Secuencia prevista de evolución del proyecto.
+
+Consultar para:
+- hitos
+- dependencias
+- orden recomendado de trabajo
+
+---
+
+## decisions.txt
+
+Decisiones operativas actuales.
+
+Consultar para:
+- decisiones vigentes
+- decisiones abiertas
+- principios temporales
+
+No sustituye ADR.
+
+---
+
+## architecture.txt
+
+Visión arquitectónica actual.
+
+Consultar para:
+- separación de capas
+- laboratorio
+- producción
+- memoria
+- IA
+- SSOT
+
+---
+
+## adr_cleanup.txt
+
+Saneamiento institucional del corpus ADR.
+
+Estado:
+Prioridad muy alta.
+
+Consultar para:
+- ADR-088
+- related
+- duplicidades
+- contradicciones
+- consolidación institucional
+
+SSOT relevantes:
+- ssot_governance
+- ssot_global
+
+---
+
+## kairosbuilder.txt
+
+Estado del compilador institucional.
+
+Consultar para:
+- RC
+- Knowledge Compiler
+- Artifact Builders
+- CLI
+- Workbench
+
+SSOT relevantes:
+- ssot_builder
+- ssot_global
+
+---
+
+## mt5_lab.txt
+
+Estado del laboratorio MT5.
+
+Consultar para:
+- terminales
+- migración
+- histórico
+- KLT
+- KLEA
+
+SSOT relevantes:
+- ssot_mt5
+- ssot_trading
+
+---
+
+## brokers.txt
+
+Investigación y selección de broker.
+
+Estado:
+Prioridad alta.
+
+Consultar para:
+- Pepperstone
+- validación demo
+- portabilidad
+- cuenta real
+
+---
+
+# MEMORIA TEMPORAL MULTI-IA
+
+Principio actual:
+
+SSOT
+=
+conocimiento institucional
+
+Snapshot
+=
+estado operativo
+
+La memoria temporal no sustituye ADR ni SSOT.
+
+Objetivo:
+
+IA nueva
+↓
+snapshot.txt
+↓
+fichero temático
+↓
+SSOT necesario
+↓
+trabajo
+
+---
+
+# REGLAS FUNDAMENTALES
+
+1. No modificar SSOT sin decisión humana.
+
+2. No modificar ADR masivamente sin evidencia.
+
+3. No asumir que algo existe porque esté documentado.
+
+4. Verificar físicamente siempre que sea posible.
+
+5. Evidencia antes que afirmaciones.
+
+6. Mantener separadas:
+
+Institución
+Laboratorio
+Evidencia
+Memoria temporal
+
+---
+
+# PRIORIDADES ACTUALES
+
+P1
+ADR Cleanup
+
+P2
+Broker compatible para producción
+
+P3
+Flota MT5 e histórico real
+
+P4
+Memoria temporal multi-IA
+
+P5
+KairosBuilder
+
+P6
+Infraestructura IA
+
+---
+
+# SIGUIENTE PASO RECOMENDADO
+
+Mantener actualizados los ficheros temáticos.
+
+Mantener snapshot.txt pequeño.
+
+Evitar duplicar información entre ficheros.
+
+El snapshot debe seguir siendo legible en menos de un minuto desde un teléfono móvil.
