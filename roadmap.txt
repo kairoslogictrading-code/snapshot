@@ -1,0 +1,396 @@
+# KAIROSLOGIC ROADMAP
+
+Última actualización: 2026-09-12
+
+Propósito:
+Mantener una visión temporal y estratégica de la evolución prevista de KairosLogic.
+
+Este documento NO es memoria institucional.
+
+Este documento NO sustituye al SSOT.
+
+Este documento NO sustituye a los ADR.
+
+Representa únicamente la hoja de ruta operativa actual.
+
+====================================================================
+PRINCIPIO GENERAL
+====================================================================
+
+KairosLogic debe evolucionar siguiendo la secuencia:
+
+Conocimiento
+↓
+Arquitectura
+↓
+Evidencia
+↓
+Validación
+↓
+Producción
+
+Ninguna fase debe adelantarse a la evidencia disponible.
+
+====================================================================
+FASE 1
+SANEAMIENTO INSTITUCIONAL
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Determinar qué conocimiento institucional sigue siendo válido.
+
+LÍNEAS:
+
+- Auditoría ADR-001 → ADR-098
+- Revisión ADR-088
+- Verificación consumidores reales
+- Reconstrucción histórica de decisiones
+- Revisión de relaciones related
+
+CRITERIO DE FINALIZACIÓN:
+
+- ADR vigentes identificados
+- ADR superseded identificados
+- Contradicciones conocidas documentadas
+- Riesgos de modificación masiva evaluados
+
+DEPENDENCIAS:
+
+Ninguna.
+
+====================================================================
+FASE 2
+MEMORIA TEMPORAL MULTI-IA
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Garantizar continuidad operativa entre IAs.
+
+LÍNEAS:
+
+- Snapshot GitHub
+- Reestructuración documental
+- Organización por proyectos
+- Optimización para móvil
+
+ENTREGABLES PREVISTOS:
+
+- snapshot.txt
+- projects.txt
+- roadmap.txt
+- architecture.txt
+- decisions.txt
+
+CRITERIO DE FINALIZACIÓN:
+
+- Nueva IA puede incorporarse al proyecto
+- Consumo reducido de contexto
+- Continuidad demostrada
+
+DEPENDENCIAS:
+
+Parcialmente independiente.
+
+====================================================================
+FASE 3
+AUDITORÍA DE KLT Y KLEA
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Consolidar la arquitectura real de los EAs.
+
+KLT
+
+- Universo Nasdaq
+- Momentum
+- ATR
+- Top-N
+- Breadth Shield
+- Macro Filter
+
+KLEA
+
+- CMG
+- Universo ASX
+- SL físico
+- Telemetría
+- Arquitectura desacoplada
+
+CRITERIO DE FINALIZACIÓN:
+
+- Arquitectura documentada
+- Riesgos identificados
+- Inconsistencias corregidas
+
+====================================================================
+FASE 4
+FORENSE Y EVIDENCIA MT5
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Obtener evidencia histórica real.
+
+LÍNEAS:
+
+- Inventario terminales
+- Extracción histórico
+- Normalización
+- Auditoría de datos
+- Métricas reales
+
+CRITERIO DE FINALIZACIÓN:
+
+- Histórico consolidado
+- Métricas fiables
+- Comparación entre EAs
+
+DEPENDENCIAS:
+
+Necesaria para decisiones posteriores.
+
+====================================================================
+FASE 5
+BUNKER Y TELEMETRÍA
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Convertir MT5 en métricas operativas reproducibles.
+
+PRINCIPIO:
+
+La IA interpreta.
+
+El sistema calcula.
+
+LÍNEAS:
+
+- Curvas
+- Drawdown
+- Sharpe
+- Profit Factor
+- Win Rate
+- Narrativa
+
+CRITERIO DE FINALIZACIÓN:
+
+- Métricas determinísticas
+- Narrativa desacoplada
+
+====================================================================
+FASE 6
+SIMPLIFICACIÓN DE INFRAESTRUCTURA MT5
+====================================================================
+
+ESTADO:
+EN MARCHA
+
+OBJETIVO:
+
+Separar claramente laboratorio y producción.
+
+ARQUITECTURA OBJETIVO:
+
+C:\KairosLab\
+    MT5_Demo
+
+C:\KairosLogic\
+    MT5\
+        Real
+
+C:\SSOT\
+    Scripts
+
+CRITERIO DE FINALIZACIÓN:
+
+- Arquitectura validada
+- Scripts centralizados
+
+DEPENDENCIAS:
+
+Elección de broker.
+
+====================================================================
+FASE 7
+SELECCIÓN DE BROKER
+====================================================================
+
+ESTADO:
+PRIORIDAD ACTUAL
+
+OBJETIVO:
+
+Seleccionar broker compatible con producción.
+
+LÍNEAS:
+
+- Pepperstone Professional
+- Alternativas ASX
+- Compatibilidad MT5
+- Condiciones reales
+
+CRITERIO DE FINALIZACIÓN:
+
+- Broker seleccionado
+- Riesgos identificados
+- Compatibilidad validada
+
+DEPENDENCIAS:
+
+Condiciona la producción.
+
+====================================================================
+FASE 8
+VALIDACIÓN DE PORTABILIDAD
+====================================================================
+
+ESTADO:
+PENDIENTE
+
+OBJETIVO:
+
+Verificar funcionamiento real en broker candidato.
+
+ALCANCE:
+
+- Símbolos
+- ATR
+- Contract Size
+- Tick Value
+- Margin
+- Stop Levels
+- Ejecución
+
+CRITERIO DE FINALIZACIÓN:
+
+- KLT validado
+- KLEA validado
+
+DEPENDENCIAS:
+
+Broker seleccionado.
+
+====================================================================
+FASE 9
+CUENTA REAL
+====================================================================
+
+ESTADO:
+PENDIENTE
+
+OBJETIVO:
+
+Migrar progresivamente a producción.
+
+REQUISITOS PREVIOS:
+
+- Broker validado
+- Portabilidad validada
+- Telemetría validada
+- Riesgos documentados
+
+CRITERIO DE FINALIZACIÓN:
+
+- Producción operativa
+
+====================================================================
+LÍNEAS PARALELAS
+====================================================================
+
+KAIROSBUILDER
+
+ESTADO:
+EN EVOLUCIÓN
+
+LÍNEAS:
+
+- Artifact Builders
+- ADR normalizados
+- CLI
+- Workbench
+- Knowledge Compiler
+
+----------------------------------------
+
+IA LOCAL
+
+ESTADO:
+OPERATIVO
+
+LÍNEAS:
+
+- Ollama
+- Docker
+- Open WebUI
+- Modelos locales
+
+----------------------------------------
+
+RISK MANAGEMENT
+
+ESTADO:
+EN MARCHA
+
+LÍNEAS:
+
+- Gap Risk
+- Slippage
+- Liquidez
+- Suspensiones
+- Riesgo residual
+
+====================================================================
+FUTURO
+====================================================================
+
+- Broker Adapter
+- KLEA LLM
+- KLSE
+- RLZ
+- Nuevos agentes expertos
+- Automatización avanzada de memoria temporal
+
+====================================================================
+PUNTO ACTUAL
+====================================================================
+
+Hoy KairosLogic se encuentra aproximadamente en:
+
+FASE 4
+↓
+FASE 5
+↓
+FASE 6
+↓
+FASE 7
+
+Es decir:
+
+Evidencia MT5
+↓
+Telemetría
+↓
+Infraestructura simplificada
+↓
+Selección de broker
+
+La elección del broker es actualmente el principal desbloqueador de la siguiente etapa del proyecto.
