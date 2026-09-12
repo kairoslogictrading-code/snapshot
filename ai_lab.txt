@@ -1,0 +1,123 @@
+# AI LAB
+
+Última actualización: 2026-09-12
+
+Estado: EN MARCHA
+
+Propósito:
+Coordinar el uso de múltiples IAs manteniendo la independencia institucional de KairosLogic.
+
+---
+
+# MISIÓN
+
+Las IAs son herramientas.
+
+KairosLogic no debe depender de ninguna IA concreta.
+
+---
+
+# ENTORNO ACTUAL
+
+## IA EXTERNAS
+
+* ChatGPT
+* Gemini
+* Claude
+* DeepSeek
+
+## IA LOCALES
+
+* Ollama
+* Qwen
+* DeepSeek Local
+* futuros modelos
+
+---
+
+# POWER-LABORATORY
+
+Infraestructura principal de experimentación IA.
+
+Incluye:
+
+* Docker Desktop
+* Ollama
+* Open WebUI
+* modelos locales
+
+---
+
+# PRINCIPIOS
+
+## AI-001
+
+Las IAs son reemplazables.
+
+## AI-002
+
+La memoria institucional permanece fuera de las IAs.
+
+## AI-003
+
+Toda IA puede equivocarse.
+
+## AI-004
+
+La evidencia prevalece sobre la autoridad percibida del modelo.
+
+---
+
+# ROLES OBSERVADOS
+
+## ChatGPT
+
+Dirección arquitectónica.
+Supervisión.
+Integración.
+
+## Gemini
+
+Investigación documental.
+Análisis de grandes corpus.
+
+## Claude
+
+Auditoría independiente.
+Revisión crítica.
+
+## DeepSeek
+
+Implementación técnica.
+Prototipado.
+
+---
+
+# MEMORIA MULTI-IA
+
+Arquitectura actual:
+
+SSOT
+↓
+Snapshot
+↓
+IA
+
+La IA consulta.
+
+La IA no constituye la memoria.
+
+---
+
+# PENDIENTES
+
+* Consolidar metodología multi-IA.
+* Mejorar continuidad entre conversaciones.
+* Evaluar automatización futura.
+* Mantener independencia tecnológica.
+
+---
+
+# SIGUIENTE ACCIÓN
+
+Continuar validando el modelo Snapshot + SSOT antes de introducir infraestructura más compleja.
