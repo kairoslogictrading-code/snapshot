@@ -1,0 +1,69 @@
+# KAIROSLOGIC BACKLOG
+
+Última actualización: YYYY-MM-DD
+
+---
+
+## B-001
+TÍTULO:
+SnapshotBuilder para KairosBuilder
+
+ORIGEN:
+DeepSeek KairosBuilder
+
+DESCRIPCIÓN:
+Crear un ArtifactBuilder específico capaz de consumir
+el repositorio snapshot y generar artefactos de contexto
+para IAs.
+
+ESTADO:
+Idea
+
+PRIORIDAD:
+Media
+
+DEPENDENCIAS:
+Maduración de KairosBuilder
+
+---
+
+## B-002
+TÍTULO:
+Migración Strategy → Artifact Builder
+
+ORIGEN:
+DeepSeek KairosBuilder
+
+DESCRIPCIÓN:
+Evaluar la sustitución del patrón Strategy actual por
+Artifact Builders especializados.
+
+ESTADO:
+Pendiente de evaluación
+
+PRIORIDAD:
+Alta
+
+DEPENDENCIAS:
+Auditoría de RC4.x
+
+---
+
+## B-003
+TÍTULO:
+Broker Adapter Layer
+
+ORIGEN:
+ChatGPT
+
+DESCRIPCIÓN:
+Introducir capa de abstracción entre estrategia y broker.
+
+ESTADO:
+Conceptual
+
+PRIORIDAD:
+Baja
+
+DEPENDENCIAS:
+Selección broker producción
