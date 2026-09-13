@@ -1,6 +1,6 @@
 # KAIROSLOGIC - BROKERS
 
-Última actualización: 2026-09-12
+Última actualización: 2026-09-13
 Estado: Investigación activa
 
 ---
@@ -33,6 +33,28 @@ La decisión de broker condiciona:
 
 5. La validación debe basarse en evidencia técnica y no únicamente en marketing.
 
+6. Evidencia antes que afirmaciones.
+
+7. La selección final deberá apoyarse en pruebas reales de portabilidad.
+
+---
+
+# CLASIFICACIÓN ACTUAL
+
+## Candidatos principales
+
+- Pepperstone
+- Interactive Brokers (IBKR)
+
+## Candidatos secundarios
+
+- Saxo Bank
+- Swissquote
+
+## Candidatos en observación
+
+- IC Markets
+
 ---
 
 # SITUACIÓN ACTUAL
@@ -40,85 +62,185 @@ La decisión de broker condiciona:
 ## Pepperstone
 
 Estado:
-Candidato principal actualmente.
+Candidato principal.
+
+Evidencia disponible:
+
+- MT5 operativo.
+- Cuenta Demo Hedging activa.
+- Compatibilidad demostrada con KLEA.
+- Compatibilidad conocida con ASX.
+- Infraestructura ya utilizada dentro de KairosLogic.
 
 Ventajas observadas:
 
-- MT5
-- Hedging
-- Compatibilidad demostrada con KLEA Demo
-- Compatibilidad con ASX
-- Infraestructura conocida
+- Integración sencilla con MT5.
+- Entorno conocido.
+- Menor fricción operativa.
+- Compatible con la línea actual de laboratorio.
 
 Pendientes:
 
-- Verificar condiciones para clientes españoles.
-- Analizar acceso profesional.
-- Validar viabilidad para producción.
+- Verificar condiciones reales para clientes españoles.
+- Analizar modalidad Professional.
+- Revisar costes reales de producción.
+- Ejecutar validación final.
+
+---
+
+## Interactive Brokers (IBKR)
+
+Estado:
+Investigación reabierta.
+
+Evidencia verificada:
+
+- Usuario KairosLogic existente.
+- Acceso autenticado confirmado.
+- Doble factor activado.
+- Existencia histórica de prueba gratuita o Paper Trading.
+
+Información pendiente de verificar:
+
+- Existencia de cuenta real aprobada.
+- Estado KYC.
+- Estado de la solicitud histórica.
+- Disponibilidad actual de Paper Trading.
+- Acceso ASX.
+- Compatibilidad práctica con KLT.
+- Compatibilidad práctica con KLEA.
+
+Ventajas potenciales:
+
+- Broker institucional de primer nivel.
+- Acceso multi-mercado internacional.
+- Acceso a acciones USA.
+- Acceso a acciones europeas.
+- Posible acceso a ASX.
+- Amplia capacidad de escalado futuro.
+
+Riesgos o incógnitas:
+
+- Complejidad operativa superior.
+- Integración MT5 menos directa.
+- Costes y requisitos aún no analizados.
+
+Siguiente acción:
+
+Determinar exactamente qué tipo de cuenta existe actualmente y cuál es su estado operativo.
+
+---
+
+## Saxo Bank
+
+Estado:
+Candidato secundario.
+
+Motivo de inclusión:
+
+- Broker regulado europeo.
+- Cobertura internacional.
+- Potencial compatibilidad institucional.
+
+Estado de investigación:
+
+Preliminar.
+
+Pendiente:
+
+- Evaluar acceso ASX.
+- Evaluar costes.
+- Evaluar compatibilidad con KairosLogic.
+
+---
+
+## Swissquote
+
+Estado:
+Candidato secundario.
+
+Motivo de inclusión:
+
+- Entidad bancaria regulada.
+- Cobertura internacional.
+- Enfoque institucional.
+
+Estado de investigación:
+
+Preliminar.
+
+Pendiente:
+
+- Evaluar acceso ASX.
+- Evaluar costes.
+- Evaluar compatibilidad con KairosLogic.
 
 ---
 
 ## IC Markets
 
 Estado:
-Cuestionado.
+Observación.
 
-Problemas detectados:
+Situación actual:
 
-- Dudas sobre ASX.
-- Dudas sobre entorno minorista.
-- No considerado actualmente candidato prioritario.
+No es candidato prioritario.
+
+Motivos:
+
+- Dudas sobre acceso ASX.
+- Dudas sobre adecuación a los requisitos de KairosLogic.
+- Menor evidencia acumulada que Pepperstone o IBKR.
 
 ---
 
-# LÍNEA DE TRABAJO ACTUAL
+# CRITERIOS DE EVALUACIÓN
 
-NO decidir todavía.
+La decisión final deberá valorar:
 
-Secuencia aprobada:
+- Compatibilidad ASX.
+- Compatibilidad MT5.
+- Compatibilidad KLT.
+- Compatibilidad KLEA.
+- Hedging.
+- Calidad de ejecución.
+- Comisiones.
+- Spreads.
+- Solidez regulatoria.
+- Facilidad operativa.
+- Escalabilidad institucional.
+- Portabilidad futura.
 
-Investigación broker
+---
+
+# PROTOCOLO APROBADO
+
+Investigación
 ↓
-Validación demo
+Validación Demo
 ↓
 Pruebas de portabilidad
 ↓
-Comparación
+Comparación objetiva
 ↓
-Decisión
+Recomendación
+↓
+Decisión humana
 ↓
 Cuenta real
 
 ---
 
-# PRUEBAS DE PORTABILIDAD FUTURAS
-
-Para KLT:
-
-- símbolos
-- histórico
-- ATR
-- lotes
-- stop level
-- tick value
-- ejecución
-
-Para KLEA:
-
-- universo ASX
-- histórico
-- ATR
-- sizing
-- SL físico
-- ejecución
-
----
-
 # PENDIENTES
 
+- Determinar estado real de la cuenta IBKR.
+- Verificar Paper Trading en IBKR.
+- Verificar acceso ASX en IBKR.
 - Investigar Pepperstone Professional.
-- Buscar alternativas retail compatibles con ASX.
-- Diseñar protocolo de validación.
+- Comparar Pepperstone vs IBKR.
+- Evaluar Saxo Bank.
+- Evaluar Swissquote.
+- Diseñar protocolo formal de validación.
 - Ejecutar pruebas demo.
 - Emitir recomendación final.
 
@@ -127,3 +249,11 @@ Para KLEA:
 # ESTADO
 
 Prioridad alta.
+
+No existe actualmente una decisión aprobada sobre broker de producción.
+
+Pepperstone continúa siendo el candidato operativo con mayor evidencia acumulada.
+
+Interactive Brokers pasa a investigación activa tras verificarse la existencia de acceso autenticado asociado a KairosLogic.
+
+La investigación permanece abierta hasta completar la validación comparativa.
