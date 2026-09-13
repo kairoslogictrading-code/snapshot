@@ -1,116 +1,313 @@
-# KAIROSLOGIC - ADR CLEANUP
+# ADR CLEANUP REGISTRY
+Última actualización: 2026-09-13
 
-Última actualización: 2026-09-12
-Estado: Trabajo activo
+===============================================================================
+OBJETIVO
+===============================================================================
 
----
+Registrar el estado de consolidación, supersession, absorción y revisión
+de los Architecture Decision Records (ADR) del repositorio KairosLogic.
 
-# MISIÓN
+Este documento NO define arquitectura.
 
-Sanear el corpus ADR antes de continuar ampliando la arquitectura institucional.
+La arquitectura oficial reside exclusivamente en los ADR vigentes,
+el SSOT institucional y los artefactos generados por KairosBuilder.
 
----
+Este registro existe únicamente para facilitar el proceso de limpieza,
+consolidación y mantenimiento del catálogo ADR.
 
-# OBJETIVO
+===============================================================================
+ESTADO GENERAL
+===============================================================================
 
-Determinar:
+ADR existentes en repositorio:
+102
 
-- qué ADR siguen vigentes;
-- qué ADR están obsoletos;
-- qué ADR se contradicen;
-- qué ADR deben consolidarse.
+ADR con estado superseded:
+Múltiples
 
----
+Proceso actual:
+Revisión y consolidación progresiva por bloques temáticos.
 
-# CORPUS
+Estado:
+EN CURSO
 
-Estado conocido:
+===============================================================================
+ADR MAESTROS CONFIRMADOS DOCUMENTALMENTE
+===============================================================================
 
 ADR-001
-↓
+Institutional Governance & Document Lifecycle Protocol
+
+ADR-004
+SSOT Architecture & Knowledge Core
+
+ADR-060
+Institutional Execution Architecture & Risk Governance
+
+ADR-066
+Kairos AI Kernel & Multi-Model Orchestration
+
+Estos ADR actúan actualmente como documentos consolidados de referencia.
+
+===============================================================================
+ADR ABSORBIDOS POR ADR-001
+GOBERNANZA Y CICLO DE VIDA DOCUMENTAL
+===============================================================================
+
+ADR-009
+ADR-046
+ADR-047
+ADR-048
+ADR-049
+ADR-077
+ADR-088
+ADR-095
+
+Estado:
+
+SUPERSEDED
+(Superseded by ADR-001)
+
+===============================================================================
+ADR ABSORBIDOS POR ADR-004
+SSOT Y KNOWLEDGE CORE
+===============================================================================
+
+ADR-002
+ADR-034
+ADR-036
+ADR-040
+ADR-044
+ADR-062
+ADR-096
+ADR-097
 ADR-098
 
----
+Estado:
 
-# PRINCIPIOS
+SUPERSEDED
+(Superseded by ADR-004)
 
-No modificar ADR masivamente sin evidencia.
+===============================================================================
+ADR ABSORBIDOS POR ADR-060
+EJECUCIÓN, RIESGO Y ARQUITECTURA OPERATIVA
+===============================================================================
 
-No asumir consumidores inexistentes.
+ADR-014
+ADR-017
+ADR-061
+ADR-063
+ADR-081
+ADR-082
+ADR-083
+ADR-099
+ADR-100
+ADR-101
+ADR-102
 
-No introducir relaciones artificiales.
+Estado:
 
-No reescribir historia institucional.
+SUPERSEDED
+(Superseded by ADR-060)
 
----
+Nota:
 
-# ÁREAS DE INVESTIGACIÓN
+ADR-101 actúa como manifiesto de consolidación RC7.3 y documenta la
+deprecación y reorganización de parte de la arquitectura operativa.
 
-## ADR-088
+===============================================================================
+ADR ABSORBIDOS POR ADR-066
+AI KERNEL Y ORQUESTACIÓN MULTIMODELO
+===============================================================================
 
-Canonical ADR Format
+ADR-051
+ADR-052
+ADR-053
+ADR-054
+ADR-055
+ADR-056
+ADR-067
+ADR-071
+ADR-089
 
-Pendientes:
+Estado:
 
-- verificar consumidores reales;
-- verificar parsers;
-- verificar automatizaciones;
-- verificar impacto.
+SUPERSEDED
+(Superseded by ADR-066)
 
----
+===============================================================================
+BLOQUE 4
+INFRAESTRUCTURA, HARDWARE Y RESPALDO
+===============================================================================
 
-## Relaciones related
+Situación actual:
 
-Existe trabajo preparatorio.
+Se identificó un conjunto coherente de ADR relacionados con:
 
-No ejecutar reconstrucción masiva todavía.
+- Hardware
+- Seguridad
+- Acceso remoto
+- Backups
+- Docker
+- Google Drive
+- Infraestructura de laboratorio
 
----
+ADRs implicados:
 
-## Jerarquía institucional
+ADR-007
+ADR-011
+ADR-013
+ADR-023
+ADR-045
+ADR-064
+ADR-065
+ADR-072
+ADR-090
 
-Pendiente de revisión completa.
+Resultado de auditoría:
 
----
+ADR-007 fue creado originalmente como:
 
-# METODOLOGÍA
+    ADR-007 Firebat Hardware Limits
 
-ChatGPT:
+y NO contiene referencias explícitas que indiquen absorción formal de
+los ADR anteriores.
 
-- dirección;
-- supervisión;
-- análisis.
+Por tanto:
 
-Gemini:
+NO existe evidencia documental suficiente para afirmar actualmente:
 
-- investigación documental;
-- búsqueda de evidencia.
+    SUPERSEDED (Superseded by ADR-007)
 
-Las conclusiones deben contrastarse con SSOT.
+Estado actual:
 
----
+PENDIENTE DE DECISIÓN ARQUITECTÓNICA
 
-# PENDIENTES
+Opciones identificadas:
 
-- revisar ADR antiguos;
-- detectar duplicidades;
-- detectar contradicciones;
-- detectar superseded;
-- consolidar supervivientes;
-- revisar jerarquía;
-- verificar ADR-088;
-- reconstruir related cuando proceda.
+Opción A:
 
----
+Evolucionar ADR-007 mediante Living ADR y convertirlo en el ADR maestro
+del bloque de Infraestructura.
 
-# RESULTADO ESPERADO
+Opción B:
 
-Corpus ADR coherente.
-Sin contradicciones relevantes.
-Preparado para futuras evoluciones institucionales.
+Crear un nuevo ADR maestro específico para Infraestructura y Hardware.
 
----
+Recomendación preliminar:
 
-# ESTADO
+Opción A.
 
-Prioridad muy alta.
+Pendiente de aprobación por el Director Humano.
+
+===============================================================================
+ADR PENDIENTES DE REVISIÓN Y CONSOLIDACIÓN
+===============================================================================
+
+BLOQUE ALGORÍTMICO, FILTROS Y VALIDACIÓN CIENTÍFICA
+
+ADR-012
+ADR-015
+ADR-021
+ADR-025
+ADR-027
+ADR-028
+ADR-031
+ADR-041
+ADR-042
+ADR-043
+ADR-078
+ADR-079
+ADR-080
+ADR-094
+
+-------------------------------------------------------------------------------
+
+BLOQUE DATOS, PERSISTENCIA Y ESTÁNDARES
+
+ADR-003
+ADR-005
+ADR-008
+ADR-010
+ADR-018
+ADR-019
+ADR-020
+ADR-022
+ADR-029
+ADR-030
+ADR-032
+ADR-037
+ADR-038
+ADR-050
+ADR-084
+ADR-085
+ADR-086
+ADR-087
+ADR-091
+ADR-092
+ADR-093
+
+-------------------------------------------------------------------------------
+
+BLOQUE IA, AUTOMATIZACIÓN Y GOBERNANZA OPERATIVA
+
+ADR-006
+ADR-016
+ADR-024
+ADR-026
+ADR-033
+ADR-035
+ADR-039
+ADR-057
+ADR-058
+ADR-059
+ADR-068
+ADR-069
+ADR-070
+ADR-073
+ADR-074
+ADR-075
+ADR-076
+
+===============================================================================
+REGLAS DE LIMPIEZA
+===============================================================================
+
+1. No eliminar ADR históricos.
+
+2. Todo ADR marcado como SUPERSEDED debe conservarse por motivos de
+   trazabilidad institucional.
+
+3. Priorizar consolidación antes que creación de nuevos ADR.
+
+4. Diferenciar siempre:
+
+   - Hechos documentados
+   - Inferencias
+   - Propuestas
+
+5. No declarar absorciones sin evidencia documental explícita o decisión
+   arquitectónica aprobada.
+
+6. Toda consolidación futura deberá quedar registrada en este fichero.
+
+===============================================================================
+OBSERVACIONES
+===============================================================================
+
+ADR-088 Canonical ADR Format se considera absorbido por ADR-001.
+
+ADR-101 RC7.3 SSOT Deprecation and Consolidation Manifest forma parte
+del proceso de reorganización institucional asociado a ADR-060.
+
+La estructura definitiva del Bloque 4 (Infraestructura) permanece
+pendiente de validación.
+
+La respuesta pendiente del ticket IBKR #424242 podría generar futuras
+actualizaciones en los ADR relacionados con brokers, ejecución,
+riesgo y sizing institucional.
+
+===============================================================================
+FIN DEL DOCUMENTO
+===============================================================================
