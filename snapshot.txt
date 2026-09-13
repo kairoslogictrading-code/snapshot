@@ -352,3 +352,143 @@ Evitar duplicar información entre ficheros.
 Registrar nuevas ideas e investigaciones no prioritarias en backlog.txt.
 
 El snapshot debe seguir siendo legible en menos de un minuto desde un teléfono móvil.
+
+===============================================================================
+2026-09-13 — BROKER VALIDATION PHASE (IBKR + PEPPERSTONE)
+===============================================================================
+
+Estado:
+EN CURSO
+
+Resumen ejecutivo:
+
+KairosLogic entra en fase de validación institucional de brokers
+antes de cualquier despliegue real adicional.
+
+Decisiones operativas actuales:
+
+1. Interactive Brokers (IBKR)
+
+- IBKR se utilizará inicialmente en entorno Paper Trading.
+- Objetivo: validar arquitectura NETTING.
+- Se evaluará:
+    * API IBKR
+    * Mercado ASX (Australia)
+    * Tecnológicas USA
+    * EURUSD
+    * XAUUSD
+    * Costes operativos reales
+    * Requisitos de margen
+    * Compatibilidad con la arquitectura KairosLogic
+
+Sizing de referencia para simulación:
+
+    Tecnológicas USA .......... 10.000 EUR
+    Energéticas ASX ........... 10.000 EUR
+    EURUSD ..................... 5.000 EUR
+    XAUUSD ..................... 5.000 EUR
+
+Capital total de referencia:
+
+    30.000 EUR
+
+Pendiente:
+
+- Respuesta oficial de Interactive Brokers al ticket enviado
+  por Manuel Guerrero solicitando aclaraciones sobre:
+
+    * Acceso ASX para cliente minorista UE.
+    * Comisiones ASX.
+    * Datos de mercado ASX.
+    * API y Paper Trading.
+    * EURUSD.
+    * XAUUSD.
+    * Apalancamiento disponible.
+    * Requisitos de margen.
+
+Principio aplicado:
+
+ADR-059 — Evidence Before Scaling.
+
+No se autoriza despliegue adicional hasta disponer de evidencia
+documentada del broker.
+
+-------------------------------------------------------------------------------
+
+2. Pepperstone
+
+- Pepperstone continúa siendo el laboratorio principal para pruebas
+  MT5 y validación de Expert Advisors.
+
+- Se mantiene preferencia por cuentas HEDGING.
+
+- Se prevé utilizar cuentas demo de aproximadamente 50.000 unidades
+  para pruebas de:
+
+    * EPER Technology.
+    * EPER Energy.
+    * Estrategias EURUSD.
+    * Estrategias XAUUSD.
+
+Limitación identificada:
+
+- Las cuentas demo destinadas a carteras de energéticas australianas
+  expiran aproximadamente a los 60 días.
+
+Pendiente:
+
+- Definir procedimiento institucional para renovación o sustitución
+  periódica de demos de validación.
+
+-------------------------------------------------------------------------------
+
+3. Programa ADR Cleanup
+
+Estado:
+PAUSADO
+
+Situación actual:
+
+- ADR-001 revisado.
+- ADR-004 revisado.
+- ADR-060 revisado.
+- ADR-066 revisado.
+- ADR-101 revisado.
+- ADR-102 revisado.
+
+Trabajo en curso:
+
+- Auditoría específica del bloque de Infraestructura.
+- Revisión de ADR-007 y de los ADR relacionados:
+    ADR-011
+    ADR-013
+    ADR-023
+    ADR-045
+    ADR-064
+    ADR-065
+    ADR-072
+    ADR-090
+
+Decisión pendiente:
+
+A) Evolucionar ADR-007 como manifiesto maestro de Infraestructura.
+
+o
+
+B) Mantener ADR-007 como documento específico de hardware
+   y crear un ADR maestro independiente.
+
+La decisión queda aplazada hasta completar la revisión documental
+con KairosADR.
+
+-------------------------------------------------------------------------------
+
+Observación institucional:
+
+No se considera necesario informar todavía a KairosADR sobre
+los cambios tácticos recientes relacionados con brokers.
+
+La actualización de contexto hacia KairosADR se realizará una vez
+recibida la respuesta oficial de Interactive Brokers y exista una
+dirección arquitectónica consolidada.
+===============================================================================
