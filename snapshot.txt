@@ -1,12 +1,13 @@
 # KAIROSLOGIC SNAPSHOT
 
-Última actualización: 2026-09-12
+Última actualización: 2026-09-13
 
 Estado global:
 Desarrollo activo.
 
 Propósito:
 Punto de entrada rápido para cualquier IA.
+
 Este fichero NO es el SSOT.
 Este fichero NO contiene conocimiento institucional completo.
 Este fichero únicamente indica el estado operativo actual y dónde consultar cada línea de trabajo.
@@ -20,8 +21,9 @@ Secuencia obligatoria:
 1. Leer snapshot.txt
 2. Identificar el subproyecto relevante
 3. Consultar el fichero temático correspondiente
-4. Consultar SSOT y ADR únicamente si son necesarios
-5. Diferenciar siempre entre:
+4. Consultar únicamente los SSOT necesarios
+5. Consultar ADR únicamente cuando la cuestión sea arquitectónica
+6. Diferenciar siempre entre:
    - Hecho verificado
    - Hipótesis
    - Decisión aprobada
@@ -36,6 +38,7 @@ KairosLogic evoluciona simultáneamente en varias líneas:
 - Knowledge Core
 - KairosBuilder
 - Flota MT5
+- Bunker Kairos
 - Broker real
 - Memoria temporal multi-IA
 - Infraestructura IA
@@ -51,6 +54,55 @@ Evidencia
 Decisiones
 ↓
 Producción
+
+---
+
+# MAPA DE CONTEXTO
+
+## Ficheros de contexto general
+
+projects.txt
+roadmap.txt
+decisions.txt
+architecture.txt
+backlog.txt
+
+## Ficheros temáticos
+
+adr_cleanup.txt
+kairosbuilder.txt
+mt5_lab.txt
+brokers.txt
+bunker.txt
+knowledge.txt
+ai_lab.txt
+risk.txt
+
+Principio:
+
+No todos los ficheros son necesarios para todas las tareas.
+
+La IA debe consultar únicamente los relacionados con el problema que intenta resolver.
+
+Ejemplos:
+
+Broker → brokers.txt
+
+MT5 / EAs → mt5_lab.txt
+
+Telemetría → bunker.txt
+
+KairosBuilder → kairosbuilder.txt
+
+ADR → adr_cleanup.txt
+
+Knowledge Core → knowledge.txt
+
+IA local → ai_lab.txt
+
+Riesgo → risk.txt
+
+Ideas futuras → backlog.txt
 
 ---
 
@@ -103,6 +155,21 @@ Consultar para:
 - memoria
 - IA
 - SSOT
+
+---
+
+## backlog.txt
+
+Ideas, investigaciones y líneas abiertas no prioritarias.
+
+Consultar para:
+- deuda técnica
+- investigaciones futuras
+- propuestas pendientes
+- posibles ADR futuros
+- ideas aparcadas
+
+No representa decisiones aprobadas.
 
 ---
 
@@ -175,6 +242,21 @@ Consultar para:
 
 ---
 
+## bunker.txt
+
+Estado de telemetría y Bunker Kairos.
+
+Consultar para:
+- métricas
+- histórico MT5
+- PnL
+- drawdown
+- profit factor
+- reporting
+- narrativa IA
+
+---
+
 # MEMORIA TEMPORAL MULTI-IA
 
 Principio actual:
@@ -183,11 +265,24 @@ SSOT
 =
 conocimiento institucional
 
-Snapshot
+Snapshot Repository
 =
-estado operativo
+memoria temporal operativa
+
+Conversaciones IA
+=
+trabajo efímero
 
 La memoria temporal no sustituye ADR ni SSOT.
+
+Infraestructura existente:
+
+* C:\SSOT
+* Google Drive sincronizado con C:\SSOT
+* VPS disponible 24/7
+* GitHub como mecanismo actualmente probado para acceso remoto al snapshot
+* repositorio snapshot organizado en múltiples ficheros temáticos
+* acceso desde dispositivos móviles
 
 Objetivo:
 
@@ -253,5 +348,7 @@ Mantener actualizados los ficheros temáticos.
 Mantener snapshot.txt pequeño.
 
 Evitar duplicar información entre ficheros.
+
+Registrar nuevas ideas e investigaciones no prioritarias en backlog.txt.
 
 El snapshot debe seguir siendo legible en menos de un minuto desde un teléfono móvil.
