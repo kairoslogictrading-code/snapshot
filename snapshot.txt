@@ -492,3 +492,36 @@ La actualización de contexto hacia KairosADR se realizará una vez
 recibida la respuesta oficial de Interactive Brokers y exista una
 dirección arquitectónica consolidada.
 ===============================================================================
+
+[IBKR SUPPORT]
+
+Canal utilizado:
+Interactive Brokers Live Chat
+
+URL base:
+https://nmisc.interactivebrokers.com/chat/start
+
+Observaciones:
+- El enlace completo contiene un JSESSIONID temporal.
+- No confiar en enlaces de sesión para accesos futuros.
+- Acceder preferentemente desde Client Portal > Support > Chat.
+
+Tickets abiertos:
+
+#424242
+Consulta técnica:
+- ASX
+- API
+- Paper Trading
+- Comisiones
+- Margin requirements
+- EURUSD
+- XAUUSD
+
+#455428
+Incidencia:
+- Acceso a cuenta Paper Trading DUQ433590
+- Usuario: kairoslogic
+- Lanzamiento involuntario de solicitud Live Account
+- Solicitud cancelada
+- Cuenta demo inaccesible tras cancelación
