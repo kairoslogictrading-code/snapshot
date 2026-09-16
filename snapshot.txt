@@ -525,3 +525,20 @@ Incidencia:
 - Lanzamiento involuntario de solicitud Live Account
 - Solicitud cancelada
 - Cuenta demo inaccesible tras cancelación
+
+2026-09
+
+Se inicia revisión dirigida del repositorio de artículos MQL5.
+
+Criterio adoptado:
+- Priorizar gestión de riesgo.
+- Priorizar validación científica.
+- Priorizar momentum y portfolio construction.
+- Descartar estrategias discrecionales y patrones clásicos.
+
+Pendiente:
+- Lectura profunda y extracción de conocimiento de:
+  * Trading System Part 1 (Quantitative Approach)
+  * Algorithmic Risk Manager
+  * Risk & Capital Management with EAs
+  * Dynamic Multi-Pair EA (Momentum / Mean Reversion)
