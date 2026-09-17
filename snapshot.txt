@@ -585,3 +585,91 @@ Antes de proponer nuevas soluciones:
 PREGUNTA PRINCIPAL QUE DEBE GUIAR ESTE CHAT
 
 "¿Qué puede aportar este artículo, técnica o fragmento de código MQL5 para mejorar KairosLogic hoy, con el menor riesgo y el mayor beneficio práctico?"
+
+KAIROS LOGIC — SESSION SNAPSHOT
+
+ESTADO
+
+Durante esta sesión se realizó una auditoría de artículos MQL5 orientada a:
+
+- Hedging
+- Shared Universe
+- Multi-EA
+- Magic isolation
+- Ticket lifecycle
+- Trailing management
+- Recovery after restart
+- Firebat constraints
+- 24/7 operation
+
+Se identificaron posibles primitivas reutilizables relacionadas con:
+
+- OnTradeTransaction()
+- MqlTradeRequest / MqlTradeResult
+- PositionSelectByTicket()
+- Magic filtering
+- Ticket tracking
+- Close By
+- Timers
+- Retcodes
+- Order lifecycle
+
+No se tomó ninguna decisión arquitectónica definitiva.
+
+--------------------------------------------------
+LÍNEA DE TRABAJO ABIERTA
+--------------------------------------------------
+
+Se incorporaron al proyecto 10 papers científicos adicionales.
+
+La siguiente fase propuesta consiste en realizar una auditoría cruzada:
+
+Papers
+↔
+ADR Kairos
+↔
+Implementación actual de EAs
+
+Objetivos:
+
+1. Identificar qué hipótesis científicas implementa cada EA.
+2. Identificar qué partes de los papers ya están explotadas.
+3. Identificar qué partes siguen sin implementarse.
+4. Detectar divergencias entre investigación original y código actual.
+5. Generar backlog de mejoras basado en investigación cuantitativa.
+
+--------------------------------------------------
+HIPÓTESIS DE TRABAJO (NO VALIDADA)
+--------------------------------------------------
+
+Hipótesis planteada durante esta conversación:
+
+Los papers probablemente contienen la mayor parte del valor estratégico
+(alpha, predictability, momentum, contrarian, portfolio construction,
+risk modelling).
+
+Los artículos MQL5 probablemente aportan principalmente detalles de
+implementación MT5 (execution, tickets, eventos, órdenes y posiciones).
+
+Esta hipótesis NO ha sido validada todavía mediante análisis completo
+de los papers ni comparación formal con los EAs actuales.
+
+Debe considerarse una línea de investigación abierta.
+
+--------------------------------------------------
+PARA FUTURAS IAS
+--------------------------------------------------
+
+No asumir que:
+
+- los artículos MQL5 son irrelevantes;
+- los papers son necesariamente superiores;
+- existe una conclusión definitiva.
+
+La tarea pendiente es verificar empíricamente:
+
+¿Qué conocimiento contenido en los papers todavía no está siendo
+aprovechado por la arquitectura y los EAs actuales?
+
+Hasta completar esa auditoría, cualquier conclusión debe considerarse
+provisional.
