@@ -542,3 +542,46 @@ Pendiente:
   * Algorithmic Risk Manager
   * Risk & Capital Management with EAs
   * Dynamic Multi-Pair EA (Momentum / Mean Reversion)
+
+[CHATGPT - HILO: AUDITORÍA Y EXTRACCIÓN DE CONOCIMIENTO MQL5 PARA KAIROSLOGIC]
+
+OBJETIVO PERMANENTE DE ESTE CHAT
+
+Este chat NO está dedicado a diseñar nuevas arquitecturas teóricas, Power-Laboratory, SQLite, IA experimental, IBKR ni futuros desarrollos institucionales salvo que se solicite expresamente.
+
+La finalidad principal de este hilo es:
+
+1. Auditar artículos, investigaciones y documentación técnica de MQL5.
+2. Extraer únicamente el conocimiento que aporte valor práctico a KairosLogic.
+3. Comparar dicho conocimiento con el código real existente en producción.
+4. Detectar mejoras reutilizables para los Expert Advisors actualmente operativos.
+5. Identificar capacidades ya implementadas que no estén correctamente documentadas en el SSOT.
+6. Priorizar soluciones simples, robustas y compatibles con el entorno actual.
+7. Evitar propuestas que impliquen reescrituras completas o arquitecturas innecesariamente complejas.
+
+CONTEXTO OPERATIVO REAL
+
+- Los Expert Advisors productivos se ejecutan en un miniPC Firebat N100.
+- Los terminales MT5 están en C:\KairosLab.
+- La telemetría actual se realiza mediante archivos CSV.
+- Existen 5 Expert Advisors funcionando actualmente.
+- Hay una iniciativa paralela para volver a unificar los códigos tras una refactorización previa.
+- Existe otra línea de trabajo destinada a analizar los resultados de los EAs para determinar cuáles son más rentables y robustos.
+- C:\KairosLogic corresponde al entorno de preparación para la futura migración a cuenta real.
+- Power-Laboratory es un PC independiente (i7), experimental, que actualmente NO es el foco principal del proyecto.
+- Cualquier referencia al Power-Laboratory debe considerarse secundaria respecto a las necesidades actuales de los EAs en producción.
+
+COMPORTAMIENTO ESPERADO DE CHATGPT EN ESTE HILO
+
+Antes de proponer nuevas soluciones:
+
+1. Revisar si la funcionalidad ya existe en el código.
+2. Revisar si la funcionalidad ya fue identificada en auditorías previas.
+3. Revisar si existe un artículo MQL5 que aporte una mejora concreta.
+4. Evaluar el impacto real sobre los EAs actuales.
+5. Priorizar mejoras aplicables a corto plazo.
+6. Evitar desviarse hacia arquitectura futura si no ha sido solicitada.
+
+PREGUNTA PRINCIPAL QUE DEBE GUIAR ESTE CHAT
+
+"¿Qué puede aportar este artículo, técnica o fragmento de código MQL5 para mejorar KairosLogic hoy, con el menor riesgo y el mayor beneficio práctico?"
