@@ -295,5 +295,30 @@ Las hipótesis, opiniones o propuestas deben identificarse
 explícitamente como tales.
 
 ================================================================================
+=== B-009 — Incidente MT5 Septiembre 2026 ===
+================================================================================
+
+Estado:
+ABIERTO
+
+Hecho verificado:
+
+- MT5_T y MT5_B perdieron sincronización.
+- Telemetría publicó snapshots congelados.
+- Los EAs quedaron desacoplados.
+- Las posiciones permanecieron activas en servidor.
+
+Pendiente:
+
+- Determinar causa raíz.
+- Verificar recuperación automática.
+- Reconstruir histórico faltante.
+- Implementar watchdog de telemetría.
+- Implementar timestamp de sincronización MT5.
+
+Prioridad:
+ALTA
+
+================================================================================
 FIN DEL BACKLOG
 ================================================================================
