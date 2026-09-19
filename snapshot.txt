@@ -673,3 +673,18 @@ aprovechado por la arquitectura y los EAs actuales?
 
 Hasta completar esa auditoría, cualquier conclusión debe considerarse
 provisional.
+
+2026-09-19
+
+INCIDENTE MT5 KLT DETECTADO
+
+- Telemetría congelada aproximadamente desde 04/09/2026.
+- MT5_T y MT5_B perdieron sincronización.
+- Posiciones permanecieron abiertas en servidor MetaQuotes.
+- Recuperación manual realizada el 19/09/2026.
+- KLT_TN, KLT_TG y KLT_TB reenganchados.
+- Investigación forense documentada en mt5_lab.txt.
+
+Estado:
+Recuperado parcialmente.
+Pendiente validación de telemetría y reconstrucción histórica.
