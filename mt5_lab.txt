@@ -108,3 +108,189 @@ C:\KairosLogic\
 # ESTADO
 
 Prioridad alta.
+
+============================================================
+INCIDENTE — PÉRDIDA DE SINCRONIZACIÓN MT5 KLT Y CONGELACIÓN
+DE TELEMETRÍA
+============================================================
+
+Fecha de detección: 19/09/2026
+
+Sistemas afectados:
+- MT5_T (KLT_TN, KLT_TG)
+- MT5_B (KLT_TB)
+
+Impacto:
+- Telemetría congelada.
+- EAs desacoplados de los terminales.
+- Pérdida de observabilidad operativa.
+- Posiciones abiertas permanecieron activas en servidor.
+
+------------------------------------------------------------
+RESUMEN EJECUTIVO
+------------------------------------------------------------
+
+La investigación forense indica que entre el 04/09/2026 y el
+06/09/2026 ocurrió una incidencia en los terminales MT5 de la
+familia KLT.
+
+Los Expert Advisors dejaron de estar correctamente vinculados
+a los terminales locales y la telemetría continuó enviando
+información congelada durante aproximadamente dos semanas,
+sin reflejar el estado real de las cuentas.
+
+Las posiciones continuaron existiendo en MetaQuotes Demo y
+seguían siendo visibles desde la aplicación móvil MT5,
+indicando que el problema estaba localizado en los terminales
+del VPS y no en el servidor de trading.
+
+------------------------------------------------------------
+EVIDENCIA OBSERVADA
+------------------------------------------------------------
+
+1. TELEMETRÍA CONGELADA
+
+La telemetría siguió generando mensajes los días:
+
+- 04/09/2026
+- 07/09/2026
+- 18/09/2026
+
+Sin embargo, desde la publicación de las 23:00 del 04/09:
+
+- mismas posiciones
+- mismos PnL
+- misma equity
+- mismo DD
+- mismo PF
+- mismo Sharpe
+
+Los datos permanecieron idénticos durante todo el período.
+
+Conclusión:
+La telemetría dejó de leer información viva de MT5 y comenzó
+a reutilizar una instantánea antigua.
+
+------------------------------------------------------------
+
+2. ÚLTIMA ACTUALIZACIÓN VÁLIDA
+
+Comparación de mensajes del 04/09:
+
+15:00
+PnL Global = -309.84 USD
+
+23:00
+PnL Global = +25.24 USD
+
+Existe variación real entre ambas publicaciones.
+
+Conclusión:
+Los sistemas seguían funcionando correctamente al menos hasta
+la noche del 04/09/2026.
+
+------------------------------------------------------------
+
+3. EVIDENCIA EN LOS LOGS
+
+Durante la recuperación se observó:
+
+MT5_T
+
+- authorization on MetaQuotes-Demo failed (Invalid account)
+- automated trading is disabled
+
+Además, inicialmente no aparecían EAs cargados en los
+gráficos de los terminales tecnológicos.
+
+------------------------------------------------------------
+
+4. RECUPERACIÓN
+
+El 19/09/2026 se realizó:
+
+- Reconexión de cuentas MetaQuotes Demo.
+- Reenganche manual de:
+    * KLT_TN_v3_06
+    * KLT_TG_v3_08
+    * KLT_TB_v3_07
+- Reactivación de Algo Trading.
+
+Los logs confirman:
+
+- expert loaded successfully
+- automated trading is enabled
+
+Los tres robots vuelven a mostrarse activos (icono azul).
+
+------------------------------------------------------------
+HIPÓTESIS OPERATIVA
+------------------------------------------------------------
+
+Nivel de confianza: Medio-Alto
+
+Entre el 04/09 y el 06/09 ocurrió algún evento de
+infraestructura, posiblemente:
+
+- actualización automática de MT5
+- reinicio del VPS
+- pérdida de sesión MetaQuotes Demo
+- carga de perfil vacío o incorrecto
+
+Como consecuencia:
+
+1. Los terminales KLT perdieron sincronización.
+2. Los EAs dejaron de ejecutarse correctamente.
+3. La telemetría continuó publicando datos congelados.
+4. Las posiciones permanecieron abiertas en el servidor.
+5. La incidencia pasó inadvertida debido a que la
+   telemetría seguía generando mensajes aparentemente válidos.
+
+------------------------------------------------------------
+ESTADO ACTUAL
+------------------------------------------------------------
+
+KLT_TN:
+- Reenganchado
+- Conectado
+
+KLT_TG:
+- Reenganchado
+- Conectado
+
+KLT_TB:
+- Reenganchado
+- Conectado
+
+Pendiente verificar:
+
+- Recuperación automática de posiciones abiertas.
+- Reactivación efectiva de telemetría.
+- Reconstrucción histórica desde servidor MT5.
+- Existencia de operaciones ejecutadas durante el período
+  sin telemetría válida.
+
+------------------------------------------------------------
+LECCIÓN APRENDIDA
+------------------------------------------------------------
+
+La telemetría actual no detecta datos congelados.
+
+Un snapshot antiguo puede seguir publicándose durante
+semanas sin generar ninguna alerta operacional.
+
+Se recomienda incorporar:
+
+- timestamp de última sincronización MT5
+- watchdog de frescura de datos
+- alerta SHIELD por ausencia de actualización real
+
+Clasificación:
+Incidente operativo MT5 / Telemetría
+
+Severidad:
+ALTA
+
+Fecha de cierre:
+Pendiente de validación de recuperación completa.
+============================================================
